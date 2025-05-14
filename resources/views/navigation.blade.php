@@ -26,6 +26,7 @@
                 </li>
             @else
                 <li><a class="btn btn-primary" href="{{route('login')}}">Login</a></li>
+                <li><a class="btn btn-primary" href="{{route('register')}}">Register</a></li>
             @endif
         </ul>
 
