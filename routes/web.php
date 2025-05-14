@@ -16,6 +16,12 @@ Route::get("/admin/add-product", [\App\Http\Controllers\IconsController::class, 
 Route::post("/admin/save-product", [\App\Http\Controllers\IconsController::class, 'saveNewIcon'])
 ->name('product.saveNew');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('order/create', [\App\Http\Controllers\OrderController::class, 'create'])->name('orders.create');
+    Route::post("/order", [\App\Http\Controllers\OrderController::class, 'store'])->name('orders.store');
+    Route::get('/order/{order}', [\App\Http\Controllers\OrderController::class, 'show'])->name('orders.show');
+});
+
 
 
 Route::get('/dashboard', function () {
