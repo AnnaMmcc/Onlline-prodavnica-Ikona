@@ -7,6 +7,9 @@ Route::get('/', [\App\Http\Controllers\HomePageController::class, 'index']);
 Route::get("/icons/search", [\App\Http\Controllers\IconsController::class, 'search'])->name('icon.search');
 Route::view("/about" , 'about');
 Route::view("/contact", "contact");
+Route::get("/shop", [\App\Http\Controllers\ShopController::class, 'index']);
+Route::get("/shop/{id}", [\App\Http\Controllers\ShopController::class, 'permalink'])->name('permalink');
+
 
 Route::get("/admin/add-product", [\App\Http\Controllers\IconsController::class, 'newIcon'])
 ->name('product.new');

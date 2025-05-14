@@ -13,12 +13,22 @@
                 <a class="nav-link" href="/about">O nama</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Ikone - Prodavnica</a>
+                <a class="nav-link" href="/shop">Ikone - Prodavnica</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/contact">Kontakt</a>
             </li>
+            @if(\Illuminate\Support\Facades\Auth::check())
+            <li><a class="btn btn-primary" href="{{route('logout')}}">Logout</a>
+                <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                </li>
+            @else
+                <li><a class="btn btn-primary" href="{{route('login')}}">Login</a></li>
+            @endif
         </ul>
+
 
     </div>
 </nav>
