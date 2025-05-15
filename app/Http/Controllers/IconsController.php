@@ -66,4 +66,33 @@ class IconsController extends Controller
 
         return view('icon-search', compact('results', 'query', 'minPrice', 'maxPrice'));
     }
+
+    public function allProducts()
+    {
+        $allProducts = IconsModel::all();
+
+        return view("admin.all-products", compact('allProducts'));
+    }
+
+    public function delete($icon)
+    {
+        $icon = IconsModel::where(['id' => $icon])->first();
+
+        if($icon === null)
+        {
+            die('Nepostojeci id ikone');
+        }
+
+        $icon->delete();
+
+        return redirect()->back();
+
+    }
+
+    public function edit($icon)
+    {
+        $icon = IconsModel::all();
+
+        return view('admin.edit', compact('icon'));
+    }
 }

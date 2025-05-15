@@ -26,10 +26,24 @@
                 </li>
             @else
                 <li><a class="btn btn-primary" href="{{route('login')}}">Login</a></li>
+            <div class="ml-1">
                 <li><a class="btn btn-primary" href="{{route('register')}}">Register</a></li>
+            </div>
             @endif
         </ul>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                @if(auth()->check() && auth()->user()->role === 'admin')
 
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="{{ route('product.new') }}">Add new Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="/admin/products/all">Edit & Delete Products </a>
+                    </li>
+                @endif
 
+            </ul>
+        </div>
     </div>
 </nav>

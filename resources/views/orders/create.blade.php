@@ -1,17 +1,32 @@
-<form action="{{ route('orders.store') }}" method="POST">
-    @csrf
-    <div class="form-group">
-        <label for="payment_method">Način plaćanja</label>
-        <select name="payment_method" id="payment_method" class="form-control">
-            <option value="card">Kartica</option>
-            <option value="cash_on_delivery">Pouzećem</option>
-        </select>
-    </div>
+@extends('layout')
 
-    <div class="form-group">
-        <label for="total_price">Ukupna cena</label>
-        <input type="number" name="total_price" id="total_price" class="form-control" required>
-    </div>
+@section('Sadrzaj')
+    <div class="container">
+        <h2>Način plaćanja</h2>
 
-    <button type="submit" class="btn btn-primary">Poruči</button>
-</form>
+        <div class="alert alert-info">
+            Ukupna cena: <strong>{{ number_format($total_price, 2) }} RSD</strong>
+        </div>
+
+        <form method="POST" action="{{ route('orders.store', $order->id) }}">
+            @csrf
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment_method" id="cash" value="cash" checked>
+                <label class="form-check-label" for="cash">
+                    Pouzećem
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment_method" id="card" value="card">
+                <label class="form-check-label" for="card">
+                    Karticom
+                </label>
+            </div>
+
+            <a href="{{route("orders.show", ['order' => $order->id])}}" type="submit" class="btn btn-success mt-3">Završi kupovinu</a>
+        </form>
+    </div>
+@endsection
+

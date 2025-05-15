@@ -11,15 +11,18 @@ Route::get("/shop", [\App\Http\Controllers\ShopController::class, 'index']);
 Route::get("/shop/{id}", [\App\Http\Controllers\ShopController::class, 'permalink'])->name('permalink');
 
 
-Route::get("/admin/add-product", [\App\Http\Controllers\IconsController::class, 'newIcon'])
-->name('product.new');
-Route::post("/admin/save-product", [\App\Http\Controllers\IconsController::class, 'saveNewIcon'])
-->name('product.saveNew');
-
 Route::middleware(['auth'])->group(function () {
     Route::get('order/create', [\App\Http\Controllers\OrderController::class, 'create'])->name('orders.create');
-    Route::post("/order", [\App\Http\Controllers\OrderController::class, 'store'])->name('orders.store');
+    Route::post("/order/{order}", [\App\Http\Controllers\OrderController::class, 'store'])->name('orders.store');
     Route::get('/order/{order}', [\App\Http\Controllers\OrderController::class, 'show'])->name('orders.show');
+    Route::get("/admin/add-product", [\App\Http\Controllers\IconsController::class, 'newIcon'])
+        ->name('product.new');
+    Route::post("/admin/save-product", [\App\Http\Controllers\IconsController::class, 'saveNewIcon'])
+        ->name('product.saveNew');
+    Route::get("/admin/products/all", [\App\Http\Controllers\IconsController::class, 'allProducts']);
+    Route::get('/admin/delete/{icon}', [\App\Http\Controllers\IconsController::class, 'delete'])->name('product.delete');
+    Route::get('/admin/edit/{icon}', [\App\Http\Controllers\IconsController::class, 'edit'])->name('product.edit');
+
 });
 
 
