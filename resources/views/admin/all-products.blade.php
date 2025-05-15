@@ -24,7 +24,7 @@
                 <td>{{$product->image}}</td>
                 <td>
                     <a href="{{route('product.delete', ['icon' => $product->id])}}"  class="btn btn-danger">Obrisi</a>
-                    <a href="" class="btn btn-primary">Edituj</a>
+                    <a href="{{route('product.edit', ['icon' => $product->id])}}" class="btn btn-primary">Edituj</a>
                 </td>
             </tr>
 

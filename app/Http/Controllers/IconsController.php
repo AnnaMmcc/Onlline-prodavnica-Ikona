@@ -91,8 +91,48 @@ class IconsController extends Controller
 
     public function edit($icon)
     {
-        $icon = IconsModel::all();
+        $icon = IconsModel::where(['id' => $icon])->first();
 
         return view('admin.edit', compact('icon'));
     }
+
+    public function update(Request $request,$id)
+    {
+        $icon = IconsModel::findOrFail($id);
+
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string|max:1000',
+            'amount' => 'required|integer|min:0',
+            'price' => 'required|numeric|min:0',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        // Ažuriraj osnovna polja
+        $icon->name = $validated['name'];
+        $icon->description = $validated['description'];
+        $icon->amount = $validated['amount'];
+        $icon->price = $validated['price'];
+
+        // Ako je poslata nova slika
+        if ($request->hasFile('image')) {
+            // Obriši staru sliku ako postoji
+            if ($icon->image && file_exists(public_path('images/' . $icon->image))) {
+                unlink(public_path('images/' . $icon->image));
+            }
+
+            $imageName = \Illuminate\Support\Str::uuid() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images'), $imageName);
+            $icon->image = $imageName;
+        }
+
+        $icon->save();
+
+        return redirect()->route('/')->with('success', 'Proizvod uspešno ažuriran!');
+    }
+
+
+
+
+
 }

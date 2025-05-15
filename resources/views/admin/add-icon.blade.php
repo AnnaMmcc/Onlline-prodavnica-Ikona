@@ -30,7 +30,7 @@
                 <input name="image" type="file" class="form-control" id="image"  placeholder="Unesite sliku ikone">
             </div>
 
-            <button>Sacuvaj</button>
+            <button class="btn btn-primary" type="button">Sacuvaj</button>
         </form>
     </div>
 

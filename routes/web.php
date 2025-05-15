@@ -22,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get("/admin/products/all", [\App\Http\Controllers\IconsController::class, 'allProducts']);
     Route::get('/admin/delete/{icon}', [\App\Http\Controllers\IconsController::class, 'delete'])->name('product.delete');
     Route::get('/admin/edit/{icon}', [\App\Http\Controllers\IconsController::class, 'edit'])->name('product.edit');
+    Route::post('/admin/update/{id}', [\App\Http\Controllers\IconsController::class, 'update'])->name('product.update');
 
 });
 
