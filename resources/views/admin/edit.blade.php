@@ -42,7 +42,7 @@
                 <input type="file" name="image" accept="image/*">
             </div>
 
-            <button class="btn btn-primary" type="button">Sacuvaj</button>
+            <button class="btn btn-primary" type="submit">Sacuvaj</button>
         </form>
     </div>
 @endsection

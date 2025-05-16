@@ -3,6 +3,11 @@
     Sve ikone-Ikonopisna radionica-Andjel Sevic
 @endsection
 @section('Sadrzaj')
+    @if(session('succes'))
+        <div class="alert alert-succes">
+            {{session('succes')}}
+        </div>
+    @endif
     <table class="table table-striped">
         <thead>
         <tr class="col-10">

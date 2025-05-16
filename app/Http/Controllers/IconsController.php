@@ -122,13 +122,13 @@ class IconsController extends Controller
             }
 
             $imageName = \Illuminate\Support\Str::uuid() . '.' . $request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images'), $imageName);
-            $icon->image = $imageName;
+            $path = $request->file('image')->storeAs('images', $imageName, 'public');
+            $icon->image = 'images/' . $imageName;
         }
 
         $icon->save();
 
-        return redirect()->route('/')->with('success', 'Proizvod uspešno ažuriran!');
+        return redirect()->route('products.all')->with('success', 'Proizvod uspešno ažuriran!');
     }
 
 
