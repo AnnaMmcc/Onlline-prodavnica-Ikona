@@ -3,9 +3,9 @@
     Sve ikone-Ikonopisna radionica-Andjel Sevic
 @endsection
 @section('Sadrzaj')
-    @if(session('succes'))
+    @if(session('success'))
         <div class="alert alert-succes">
-            {{session('succes')}}
+            {{session('success')}}
         </div>
     @endif
     <table class="table table-striped">

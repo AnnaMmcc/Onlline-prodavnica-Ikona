@@ -4,7 +4,7 @@
 @endsection
 @section("Sadrzaj")
     <div class="container col-lg-6 mt-4">
-        <form method="POST" action="{{route('product.saveNew')}}" enctype="multipart/form-data">
+        <form method="POST" action="{{route('product.save')}}" enctype="multipart/form-data">
             {{csrf_field()}}
              @if($errors->any())
                 <div class="text-danger">{{$errors->first()}}</div>
@@ -30,7 +30,7 @@
                 <input name="image" type="file" class="form-control" id="image"  placeholder="Unesite sliku ikone">
             </div>
 
-            <button class="btn btn-primary" type="button">Sacuvaj</button>
+            <button class="btn btn-primary" type="submit">Sacuvaj</button>
         </form>
     </div>
 

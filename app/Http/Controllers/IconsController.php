@@ -7,6 +7,7 @@ use App\Models\IconsModel;
 use App\Repositories\IconRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class IconsController extends Controller
 {
@@ -76,17 +77,19 @@ class IconsController extends Controller
 
     public function delete($icon)
     {
-        $icon = IconsModel::where(['id' => $icon])->first();
+        $icon = IconsModel::where('id', $icon)->first();
 
-        if($icon === null)
-        {
-            die('Nepostojeci id ikone');
+        if ($icon === null) {
+            abort(404, 'Nepostojeći ID ikone');
+        }
+
+        if ($icon->image && Storage::disk('public')->exists($icon->image)) {
+            Storage::disk('public')->delete($icon->image);
         }
 
         $icon->delete();
 
-        return redirect()->back();
-
+        return redirect()->back()->with('success', 'Proizvod uspešno obrisan.');
     }
 
     public function edit($icon)

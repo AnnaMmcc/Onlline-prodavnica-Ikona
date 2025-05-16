@@ -17,8 +17,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/order/{order}', [\App\Http\Controllers\OrderController::class, 'show'])->name('orders.show');
     Route::get("/admin/add-product", [\App\Http\Controllers\IconsController::class, 'newIcon'])
         ->name('product.new');
-    Route::post("/admin/save-product", [\App\Http\Controllers\IconsController::class, 'saveNewIcon'])
-        ->name('product.saveNew');
+    Route::post("/admin/save-product", [\App\Http\Controllers\IconsController::class, 'saveNewIcon'])->name('product.save');
     Route::get("/admin/products/all", [\App\Http\Controllers\IconsController::class, 'allProducts'])->name('products.all');
     Route::get('/admin/delete/{icon}', [\App\Http\Controllers\IconsController::class, 'delete'])->name('product.delete');
     Route::get('/admin/edit/{icon}', [\App\Http\Controllers\IconsController::class, 'edit'])->name('product.edit');
