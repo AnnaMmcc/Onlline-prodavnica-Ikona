@@ -45,5 +45,20 @@ class OrderController extends Controller
         return redirect()->route('payment.cash', ['order' => $order->id])->with('success', 'Uspešno ste završili kupovinu.');
     }
 
+    public function addContact(Request $request)
+    {
+      $request->validate([
+      'phone' => 'required|string|min:6|max:20'
+      ]);
+
+      $user = auth()->user();
+      $user->phone = $request->input('phone');
+      $user->save();
+      return redirect()->back()->with('success', 'Broj telefona je uspesno dodat');
+
+    }
+
+
+
 
 }

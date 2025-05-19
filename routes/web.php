@@ -16,6 +16,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post("/order/{order}", [\App\Http\Controllers\OrderController::class, 'store'])->name('orders.store');
     Route::view('/payment/card', 'orders.card')->name('payment.card');
     Route::view('/payment/cash', 'orders.cash')->name('payment.cash');
+    Route::post("/add-contact", [\App\Http\Controllers\OrderController::class, 'addContact'])->name('add.contact');
 
     Route::get("/admin/add-product", [\App\Http\Controllers\IconsController::class, 'newIcon'])
         ->name('product.new');
