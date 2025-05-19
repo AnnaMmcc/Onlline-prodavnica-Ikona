@@ -8,24 +8,27 @@
             Ukupna cena: <strong>{{ number_format($total_price, 2) }} RSD</strong>
         </div>
 
-        <form method="POST" action="{{ route('orders.store', $order->id) }}">
+        <form method="POST" action="{{ route('orders.store', ['order' => $order]) }}">
             @csrf
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="payment_method" id="cash" value="cash" checked>
+                <input class="form-check-input" type="radio" name="payment_method" id="cash" value="cash"
+                    {{ old('payment_method', 'cash') == 'cash' ? 'checked' : '' }}>
                 <label class="form-check-label" for="cash">
                     Pouzećem
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="payment_method" id="card" value="card">
+                <input class="form-check-input" type="radio" name="payment_method" id="card" value="card"
+                    {{ old('payment_method') == 'card' ? 'checked' : '' }}>
                 <label class="form-check-label" for="card">
-                    Karticom
+                    Uplata na račun
                 </label>
             </div>
 
-            <a href="{{route("orders.show", ['order' => $order->id])}}" type="submit" class="btn btn-success mt-3">Završi kupovinu</a>
+
+            <button type="submit" class="btn btn-success mt-3">Završi kupovinu</button>
         </form>
     </div>
 @endsection

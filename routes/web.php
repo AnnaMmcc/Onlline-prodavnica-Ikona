@@ -14,7 +14,9 @@ Route::get("/shop/{id}", [\App\Http\Controllers\ShopController::class, 'permalin
 Route::middleware(['auth'])->group(function () {
     Route::get('order/create', [\App\Http\Controllers\OrderController::class, 'create'])->name('orders.create');
     Route::post("/order/{order}", [\App\Http\Controllers\OrderController::class, 'store'])->name('orders.store');
-    Route::get('/order/{order}', [\App\Http\Controllers\OrderController::class, 'show'])->name('orders.show');
+    Route::view('/payment/card', 'orders.card')->name('payment.card');
+    Route::view('/payment/cash', 'orders.cash')->name('payment.cash');
+
     Route::get("/admin/add-product", [\App\Http\Controllers\IconsController::class, 'newIcon'])
         ->name('product.new');
     Route::post("/admin/save-product", [\App\Http\Controllers\IconsController::class, 'saveNewIcon'])->name('product.save');

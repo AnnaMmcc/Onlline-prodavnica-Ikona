@@ -15,6 +15,7 @@
                               <h5 class="cart-title">{{$icon->name}}</h5>
                               <p class="cart-title">{{$icon->desription}}</p>
                               <p class="cart-title">{{$icon->price}} RSD</p>
+                              <a href="{{route('permalink', ['id' => $icon->id])}}" class="btn btn-primary" type="button">Pogledaj</a>
                           </div>
                       </div>
                   </div>
