@@ -18,11 +18,18 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/contact">Kontakt</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href='/cart'>Korpa</a>
+            </li>
             @if(\Illuminate\Support\Facades\Auth::check())
-            <li><a class="btn btn-primary" href="{{route('logout')}}">Logout</a>
-                <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+                <li>
+                    <a class="btn btn-primary" href="#"
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </li>
             @else
                 <li><a class="btn btn-primary" href="{{route('login')}}">Login</a></li>
@@ -40,6 +47,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-primary" href="/admin/products/all">Edit & Delete Products </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="{{route('all.contacts')}}">All Contacts </a>
                     </li>
                 @endif
 

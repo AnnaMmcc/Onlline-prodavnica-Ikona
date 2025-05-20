@@ -12,10 +12,10 @@ Route::get("/shop/{id}", [\App\Http\Controllers\ShopController::class, 'permalin
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('order/create', [\App\Http\Controllers\OrderController::class, 'create'])->name('orders.create');
-    Route::post("/order/{order}", [\App\Http\Controllers\OrderController::class, 'store'])->name('orders.store');
-    Route::view('/payment/card', 'orders.card')->name('payment.card');
-    Route::view('/payment/cash', 'orders.cash')->name('payment.cash');
+    Route::post("/cart/add", [\App\Http\Controllers\OrderController::class, 'addToCart'])->name('cart.add');
+    Route::get('/cart', [\App\Http\Controllers\OrderController::class, 'index'])->name('cart');
+    Route::get("/cart/finish", [\App\Http\Controllers\OrderController::class, 'finishOrder'])->name('cart.finish');
+
     Route::post("/add-contact", [\App\Http\Controllers\OrderController::class, 'addContact'])->name('add.contact');
 
     Route::get("/admin/add-product", [\App\Http\Controllers\IconsController::class, 'newIcon'])
@@ -25,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/delete/{icon}', [\App\Http\Controllers\IconsController::class, 'delete'])->name('product.delete');
     Route::get('/admin/edit/{icon}', [\App\Http\Controllers\IconsController::class, 'edit'])->name('product.edit');
     Route::put('/admin/update/{id}', [\App\Http\Controllers\IconsController::class, 'update'])->name('product.update');
+    Route::get('/admin/contacts/all', [\App\Http\Controllers\ContactController::class, 'allContacts'])->name('all.contacts');
 
 });
 

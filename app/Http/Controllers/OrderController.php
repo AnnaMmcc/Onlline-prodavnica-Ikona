@@ -2,48 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CartAddRequest;
 use App\Models\IconsModel;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class OrderController extends Controller
 {
-    public function create()
-    {
-        $userId = Auth::id();
-
-        $order = Order::where('user_id', $userId)->latest()->first();
-
-
-        return view('orders.create', [
-            'total_price' => $order?->total_price ?? 0,
-            'order' => $order,
-        ]);
-    }
-
-    public function store(Request $request, Order $order)
-    {
-        $validated = $request->validate([
-            'payment_method' => 'required|in:cash,card',
-        ]);
-
-
-        $order->payment_method = $validated['payment_method'];
-        $order->save();
-
-
-
-        if ($validated['payment_method'] === 'card') {
-            return redirect()->route('payment.card', ['order' => $order->id]);
-        }
-        if ($order->user_id !== Auth::id()) {
-            abort(403, 'Nemate dozvolu da menjate ovu narudžbinu.');
-        }
-
-
-        return redirect()->route('payment.cash', ['order' => $order->id])->with('success', 'Uspešno ste završili kupovinu.');
-    }
 
     public function addContact(Request $request)
     {
@@ -58,6 +25,57 @@ class OrderController extends Controller
 
     }
 
+    public function addToCart(CartAddRequest $request)
+    {
+        $product = IconsModel::find($request->id);
+
+        $cart = Session::get('product', []);
+        foreach ($cart as &$item) {
+            if ($item['product_id'] == $request->id) {
+                $item['amount'] += $request->amount;
+                Session::put('product', $cart);
+                return redirect()->route('cart')->with('success', 'Količina ažurirana u korpi');
+            }
+        }
+
+        Session::push('product', [
+            'product_id' => $request->id,
+            'amount' => $request->amount
+        ]);
+
+        return redirect()->route('cart')->with('success', 'Proizvod uspešno dodat u korpu');
+    }
+
+
+    public function index()
+    {
+        $cart = Session::get('product', []);
+
+        if (count($cart) < 1) {
+            return redirect("/");
+        }
+        $combine = collect($cart)->map(function ($item) {
+
+            $product = IconsModel::find($item['product_id']);
+            if (!$product) return null;
+            return [
+                'name' => $product->name,
+                'description' => $product->description,
+                'amount' => $item['amount'],
+                'price' => $product->price,
+                'total' => $item['amount'] * $product->price,
+            ];
+
+        })->filter()->values();
+
+      $totalPrice = $combine->sum('total');
+
+      return view('cart',[
+          'combinedItems' => $combine,
+          'totalPrice' => $totalPrice,
+      ]);
+
+    }
 
 
 

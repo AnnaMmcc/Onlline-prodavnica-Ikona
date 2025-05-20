@@ -9,7 +9,21 @@
                 <h5 class="card-title">{{$id->name}}</h5>
                 <p class="card-text">{{$id->description}}</p>
                 <h6 class="card-text">{{$id->price}} RSD</h6>
-                <a href="{{route('orders.create')}}" class="btn btn-primary">Kupi</a>
+                <form method="POST" action="{{ route("cart.add") }}">
+                    {{ csrf_field() }}
+                    @if(session('error'))
+                        <div class="text-danger">{{ session('error') }}</div>
+                    @endif
+
+                    <input type="hidden" name="id" value="{{ $id->id }}">
+                    <div class="form-group card-text">
+                        <label for="amount">Amount:</label>
+                        <input required type="number" class="form-control" id="amount" name="amount"  placeholder="Kolicina..">
+                    </div>
+                    <button class="btn btn-primary m-3 card-text">Dodaj u korpu</button>
+
+                </form>
+
             </div>
     </div>
 @endsection

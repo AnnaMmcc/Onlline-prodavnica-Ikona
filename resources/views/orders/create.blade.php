@@ -8,7 +8,7 @@
             Ukupna cena: <strong>{{ number_format($total_price, 2) }} RSD</strong>
         </div>
 
-        <form method="POST" action="{{ route('orders.store', ['order' => $order]) }}">
+        <form method="POST" action="{{ route('orders.store')}}">
             @csrf
 
             <div class="form-check">
