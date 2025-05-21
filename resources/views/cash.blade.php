@@ -10,5 +10,5 @@
     <h2>Plaćanje pouzećem</h2>
     <p>Hvala na narudžbini!</p>
     <p>Iznos: <strong>{{ $order->total_price }} RSD</strong></p>
-    <p>Platite kuriru prilikom dostave. Kontaktiraćemo vas uskoro.</p>
+    <p>Platite kuriru prilikom dostave. Kontaktiraćemo vas uskoro radi potvrde narudzbine.</p>
 @endsection

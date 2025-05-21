@@ -11,6 +11,7 @@
     <table class="table table-striped">
         <thead>
         <tr class="col-10">
+            <th>ID</th>
             <th>Ime</th>
             <th>Opis</th>
             <th>Kolicina</th>
@@ -22,7 +23,8 @@
         <tbody>
         @foreach($allProducts as $product)
 
-            <tr><td>{{$product->name}}</td>
+            <tr><td>{{$product->id}}</td>
+                <td>{{$product->name}}</td>
                 <td>{{$product->description}}</td>
                 <td>{{$product->amount}}</td>
                 <td>{{$product->price}}</td>

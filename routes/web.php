@@ -28,7 +28,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/edit/{icon}', [\App\Http\Controllers\IconsController::class, 'edit'])->name('product.edit');
     Route::put('/admin/update/{id}', [\App\Http\Controllers\IconsController::class, 'update'])->name('product.update');
     Route::get('/admin/contacts/all', [\App\Http\Controllers\ContactController::class, 'allContacts'])->name('all.contacts');
-
+    Route::get('/admin/orders', [\App\Http\Controllers\OrderController::class, 'orders'])->name('all.orders');
+    Route::get('/orders/{order}/edit', [\App\Http\Controllers\OrderController::class, 'edit'])->name('orders.edit');
+    Route::put('/orders/{order}', [\App\Http\Controllers\OrderController::class, 'update'])->name('orders.update');
+    Route::delete('/orders/{order}', [\App\Http\Controllers\OrderController::class, 'destroy'])->name('orders.destroy');
 });
 
 

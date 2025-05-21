@@ -22,7 +22,7 @@ class Order extends Model
     }
     public function items()
     {
-        return $this->belongsToMany(IconsModel::class, 'order_items')
+        return $this->belongsToMany(IconsModel::class, 'order_items', 'order_id', 'product_id')
             ->withPivot('quantity', 'price')
             ->withTimestamps();
     }

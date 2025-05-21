@@ -159,5 +159,41 @@ class OrderController extends Controller
         return view('cash', compact('order'));
     }
 
+    public function orders()
+    {
+        $orders = Order::all();
+
+        return view('admin.orders-all', compact('orders'));
+
+    }
+
+    public function edit(Order $order)
+    {
+        return view('orders-edit', compact('order'));
+    }
+
+    public function update(Request $request, Order $order)
+    {
+        $request->validate([
+            'status' => 'required|string',
+            'payment_method' => 'required|string|in:card,cash',
+        ]);
+
+        $order->update([
+            'status' => $request->status,
+            'payment_method' => $request->payment_method,
+        ]);
+
+        return redirect()->route('all.orders')->with('success', 'Porudžbina je uspešno izmenjena.');
+    }
+
+    public function destroy(Order $order)
+    {
+        $order->items()->detach();
+
+        $order->delete();
+
+        return redirect()->route('all.orders')->with('success', 'Porudžbina je uspešno obrisana.');
+    }
 
 }

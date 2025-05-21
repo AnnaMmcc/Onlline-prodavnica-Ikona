@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Glavna<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Glavna</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/about">O nama</a>
@@ -43,13 +43,16 @@
                 @if(auth()->check() && auth()->user()->role === 'admin')
 
                     <li class="nav-item">
-                        <a class="nav-link text-primary" href="{{ route('product.new') }}">Add new Product</a>
+                        <a class="nav-link text-primary" href="{{ route('product.new') }}">Dodaj ikonu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-primary" href="/admin/products/all">Edit & Delete Products </a>
+                        <a class="nav-link text-primary" href="/admin/products/all">Edituj|Brisi </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-primary" href="{{route('all.contacts')}}">All Contacts </a>
+                        <a class="nav-link text-primary" href="{{route('all.contacts')}}">Kontakti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="{{route('all.orders')}}">Narudzbine</a>
                     </li>
                 @endif
 
