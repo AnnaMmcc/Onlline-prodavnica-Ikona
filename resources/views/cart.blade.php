@@ -23,9 +23,21 @@
             @endforeach
         </div>
         <div>
-            <h5>Ukupna cena: {{ number_format($totalPrice, 2) }} RSD</h5>
-            <a class="btn btn-primary m-3" href="{{route('cart.finish')}}">Zavrsi porudzbinu</a>
-        </div>
+            <form method="POST" action="{{ route('checkout') }}">
+                @csrf
 
+                <p>Izaberite način plaćanja:</p>
+                <label><input type="radio" name="payment_method" value="card" required> Kartica</label><br>
+                <label><input type="radio" name="payment_method" value="cash" required> Gotovina (pouzećem)</label><br><br>
+
+                <div>
+                    <label for="phone">Broj telefona za potvrdu narudžbine:</label><br>
+                    <input type="text" name="phone" id="phone" value="{{ old('phone', auth()->user()->phone ?? '') }}" required>
+                </div>
+                <br>
+
+                <button type="submit">Završi narudžbinu</button>
+            </form>
+        </div>
     </div>
 @endsection()

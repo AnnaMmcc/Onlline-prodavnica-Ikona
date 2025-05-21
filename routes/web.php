@@ -14,7 +14,9 @@ Route::get("/shop/{id}", [\App\Http\Controllers\ShopController::class, 'permalin
 Route::middleware(['auth'])->group(function () {
     Route::post("/cart/add", [\App\Http\Controllers\OrderController::class, 'addToCart'])->name('cart.add');
     Route::get('/cart', [\App\Http\Controllers\OrderController::class, 'index'])->name('cart');
-    Route::get("/cart/finish", [\App\Http\Controllers\OrderController::class, 'finishOrder'])->name('cart.finish');
+    Route::post('/checkout', [\App\Http\Controllers\OrderController::class, 'checkout'])->name('checkout');
+    Route::get('/card', [\App\Http\Controllers\OrderController::class, 'card'])->name('order.card');
+    Route::get('/cash', [\App\Http\Controllers\OrderController::class, 'cash'])->name('order.cash');
 
     Route::post("/add-contact", [\App\Http\Controllers\OrderController::class, 'addContact'])->name('add.contact');
 

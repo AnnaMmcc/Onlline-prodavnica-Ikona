@@ -17,7 +17,7 @@
 
                     <input type="hidden" name="id" value="{{ $id->id }}">
                     <div class="form-group card-text">
-                        <label for="amount">Amount:</label>
+                        <label for="amount">Kolicina:</label>
                         <input required type="number" class="form-control" id="amount" name="amount"  placeholder="Kolicina..">
                     </div>
                     <button class="btn btn-primary m-3 card-text">Dodaj u korpu</button>
