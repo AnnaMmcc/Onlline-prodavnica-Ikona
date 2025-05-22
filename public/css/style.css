@@ -1,0 +1,19 @@
+.dark-bg {
+    background-color: #6B4226;
+    color: white;
+}
+.gold-bg {
+    background-color: #dab389;
+}
+.light-bg {
+    background-color: #FFF8E1 !important;
+}
+.black-bg {
+    background-color: #1A1A1A;
+}
+.text-brown {
+    color: #6B4226;
+}
+.border-brown {
+    border: 2px solid #6B4226;
+}

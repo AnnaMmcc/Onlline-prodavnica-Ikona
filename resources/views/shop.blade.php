@@ -11,7 +11,7 @@
                     <h5 class="card-title">{{$icon->name}}</h5>
                     <p class="card-text">{{$icon->description}}</p>
                     <h6 class="card-text">{{$icon->price}} RSD</h6>
-                    <a href="{{route('permalink', ['id' => $icon->id])}}" class="btn btn-primary">Pogledaj</a>
+                    <a href="{{route('permalink', ['id' => $icon->id])}}" class="btn gold-bg  text-brown border-brown">Pogledaj</a>
                     @endforeach
                 </div>
         </div>

@@ -3,7 +3,7 @@
     Ikonopisna radionica-Andjel Šević
 @endsection
 @section("Sadrzaj")
-    <div class="container">
+    <div class="container mt-3">
         <form action="{{route('icon.search')}}" method="GET" class="row mb-4">
             {{csrf_field()}}
             <div class="col-md-4">
@@ -16,7 +16,7 @@
                 <input type="number" name="max_price" class="form-control" placeholder="Max cena.." value="{{ request('max_price')}}">
             </div>
             <div class="col-md-2">
-                <button type="submit" class="btn btn-primary w-100">Filtriraj</button>
+                <button type="submit" class="btn w-100 gold-bg  text-brown border-brown">Filtriraj</button>
             </div>
 
         </form>

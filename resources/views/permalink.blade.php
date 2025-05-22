@@ -20,7 +20,7 @@
                         <label for="amount">Kolicina:</label>
                         <input required type="number" class="form-control" id="amount" name="amount"  placeholder="Kolicina..">
                     </div>
-                    <button class="btn btn-primary m-3 card-text">Dodaj u korpu</button>
+                    <button class="btn gold-bg  text-brown border-brown m-3 card-text">Dodaj u korpu</button>
 
                 </form>
 
