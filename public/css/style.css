@@ -3,10 +3,10 @@
     color: white;
 }
 .gold-bg {
-    background-color: #dab389;
+    background-color: #ffba37;
 }
 .light-bg {
-    background-color: #FFF8E1 !important;
+    background-color: #F5F0E6 !important;
 }
 .black-bg {
     background-color: #1A1A1A;
@@ -16,4 +16,60 @@
 }
 .border-brown {
     border: 2px solid #6B4226;
+}
+.body {
+    background-color: #F5F0E6; /* Pergament pozadina */
+    font-family: 'Segoe UI', sans-serif;
+    color: #3E2F1C; /* Tamno braon tekst */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: #FFFFFF; /* Bela pozadina forme */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+.h1 {
+    text-align: center;
+    color: #3E2F1C;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.input[type="text"],
+.input[type="email"],
+.input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #E1E1E1;
+    border-radius: 6px;
+    background-color: #FAFAFA;
+    font-size: 14px;
+}
+
+.input[type="submit"] {
+    width: 100%;
+    background-color: #D4AF37; /* Zlatna */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.input[type="submit"]:hover {
+    background-color: #8B1E3F; /* Tamno crvena na hover */
+}
+.button[type="submit"]:hover {
+    background-color: #8B1E3F;
 }
