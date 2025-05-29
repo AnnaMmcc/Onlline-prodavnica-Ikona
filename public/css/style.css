@@ -18,9 +18,9 @@
     border: 2px solid #6B4226;
 }
 .body {
-    background-color: #F5F0E6; /* Pergament pozadina */
+    background-color: #F5F0E6;
     font-family: 'Segoe UI', sans-serif;
-    color: #3E2F1C; /* Tamno braon tekst */
+    color: #3E2F1C;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .form {
-    background-color: #FFFFFF; /* Bela pozadina forme */
+    background-color: #FFFFFF;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -56,7 +56,7 @@
 
 .input[type="submit"] {
     width: 100%;
-    background-color: #D4AF37; /* Zlatna */
+    background-color: #D4AF37;
     color: #FFFFFF;
     border: none;
     padding: 10px;
@@ -68,7 +68,7 @@
 }
 
 .input[type="submit"]:hover {
-    background-color: #8B1E3F; /* Tamno crvena na hover */
+    background-color: #8B1E3F;
 }
 .button[type="submit"]:hover {
     background-color: #8B1E3F;

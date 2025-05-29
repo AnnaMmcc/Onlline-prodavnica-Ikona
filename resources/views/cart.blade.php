@@ -3,20 +3,26 @@
     Cart - Web Shop
 @endsection()
 @section("Sadrzaj")
-    @if(session('success'))
-        <div class="text-success">{{ session('success') }}</div>
-    @endif
-    <div class="container">
+    <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center">
+        @if(session('success'))
+            <div class="text-success">{{ session('success') }}</div>
+        @endif
         <div class="row">
             @foreach($combinedItems as $item)
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mt-2">
+                <div class="col-12 mb-4 mt-2">
                     <div class="card h-100">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ $item['name'] }}</h5>
+                            <h5 class="card-title"><strong>{{ $item['name'] }}</strong></h5>
                             <p class="card-text">Opis: {{ $item['description'] }}</p>
                             <p class="card-text">Kolicina: {{ $item['amount'] }}</p>
-                            <p class="card-text">Cena: {{ $item['price'] }}</p>
-                            <p class="card-text">Ukupno: {{ $item['total'] }}</p>
+                            <p class="card-text">Cena: {{ $item['price'] }} RSD</p>
+                            <p class="card-text"><strong>Ukupno: {{ $item['total'] }} RSD</strong></p>
+                            <form action="{{ route('cart.remove', ['product_id' => $item['product_id']]) }}" method="POST" onsubmit="return confirm('Da li ste sigurni da želite da izbrišete ovu stavku?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger mt-2">Ukloni</button>
+                            </form>
+
                         </div>
                     </div>
                 </div>

@@ -6,9 +6,11 @@
     @php
         $order = \App\Models\Order::find(session('order_id'));
     @endphp
-
-    <h2>Plaćanje pouzećem</h2>
+<div class="container text-center m-3">
+    <h2><strong>Plaćanje pouzećem</strong></h2>
     <p>Hvala na narudžbini!</p>
     <p>Iznos: <strong>{{ $order->total_price }} RSD</strong></p>
     <p>Platite kuriru prilikom dostave. Kontaktiraćemo vas uskoro radi potvrde narudzbine.</p>
+</div>
+
 @endsection

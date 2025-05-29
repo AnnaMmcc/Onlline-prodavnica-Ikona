@@ -3,7 +3,8 @@
     Ikonopisna radionica-Andjel Sevic
 @endsection
 @section("Sadrzaj")
-    <div class="card" style="width: 18rem;">
+    <div class="container d-flex justify-content-center align-items-center mt-3">
+        <div class="card" style="width: 18rem;">
             <img src="{{ asset('storage/' . $id->image) }}" class="card-img-top" alt="{{$id->name}}">
             <div class="card-body">
                 <h5 class="card-title">{{$id->name}}</h5>
@@ -30,5 +31,7 @@
                 </form>
 
             </div>
+        </div>
     </div>
+
 @endsection

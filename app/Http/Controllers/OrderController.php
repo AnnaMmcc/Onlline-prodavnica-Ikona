@@ -60,6 +60,7 @@ class OrderController extends Controller
             $product = IconsModel::find($item['product_id']);
             if (!$product) return null;
             return [
+                'product_id' => $item['product_id'],
                 'name' => $product->name,
                 'description' => $product->description,
                 'amount' => $item['amount'],
@@ -195,5 +196,20 @@ class OrderController extends Controller
 
         return redirect()->route('all.orders')->with('success', 'Porudžbina je uspešno obrisana.');
     }
+
+    public function remove($product_id)
+    {
+        $cart = Session::get('product', []);
+
+
+        $cart = array_filter($cart, function ($item) use ($product_id) {
+            return $item['product_id'] != $product_id;
+        });
+
+        Session::put('product', $cart);
+
+        return redirect()->back()->with('success', 'Stavka je uspešno uklonjena.');
+    }
+
 
 }

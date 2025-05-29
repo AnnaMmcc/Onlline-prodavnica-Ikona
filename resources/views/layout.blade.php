@@ -12,12 +12,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>@yield("Naslov")</title>
 </head>
-<body>
-<div>
+<body class="d-flex flex-column min-vh-100">
     @include("navigation")
+    <main class="flex-grow-1">
     @yield("Sadrzaj")
+    </main>
     @include("footer")
-</div>
 
 </body>
 </html>
