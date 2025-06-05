@@ -3,39 +3,55 @@
     Ikonopisna radionica-Andjel Šević
 @endsection
 @section("Sadrzaj")
-    <div class="container d-flex flex-column justify-content-center">
-        <div class="mt-3">
-            <form action="{{route('icon.search')}}" method="GET" class="row mb-4">
-                {{csrf_field()}}
-                <div class="col-md-4">
-                    <input type="text" name="query" class="form-control" placeholder="Pretrazi ikone.." value="{{ request('query') }}">
-                </div>
-                <div class="col-md-2">
-                    <input type="number" name="min_price" class="form-control" placeholder="Min cena.." value="{{ request('min_price') }}">
-                </div>
-                <div class="col-md-2">
-                    <input type="number" name="max_price" class="form-control" placeholder="Max cena.." value="{{ request('max_price')}}">
-                </div>
-                <div class="col-md-2">
-                    <button type="submit" class="hover inline-flex items-center px-4 py-2 gold-bg dark:gold-bg border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:gold-bg dark:hover:gold-bg  focus:bg-white active:light-bg dark:active:gold-bg focus:outline-none focus:ring-2  dark:focus:ring-offset-white transition ease-in-out duration-150">Filtriraj</button>
-                </div>
+    <div class="container d-flex flex-column align-items-center justify-content-start mt-5">
 
-            </form>
-        </div>
-        <div class="container d-flex flex-wrap mt-4">
-            <div class="card" style="width: 18rem;">
+        {{-- Forma za filtriranje --}}
+        <form action="{{ route('icon.search') }}" method="GET" class="w-100 mb-4 p-4 border rounded shadow bg-white" style="max-width: 900px;">
+            {{ csrf_field() }}
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <input type="text" name="query" class="form-control" placeholder="Pretraži ikone..." value="{{ request('query') }}">
+                </div>
+                <div class="col-md-3 col-lg-2">
+                    <input type="number" name="min_price" class="form-control" placeholder="Min cena..." value="{{ request('min_price') }}">
+                </div>
+                <div class="col-md-3 col-lg-2">
+                    <input type="number" name="max_price" class="form-control" placeholder="Max cena..." value="{{ request('max_price') }}">
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <button type="submit" class="btn btn-warning w-100 text-white fw-bold">
+                        Filtriraj
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        @if($LastIcons->count() > 0)
+            <div class="row w-100 justify-content-center">
                 @foreach($LastIcons as $Icon)
-                    <img src="{{ asset('storage/' . $Icon->image) }}" class="card-img-top" alt="{{$Icon->name}}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$Icon->name}}</h5>
-                        <p class="card-text">{{$Icon->description}}</p>
-                        <p class="card-text">{{$Icon->price}} din</p>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm border-0 hover-shadow transition">
+                            <img src="{{ asset('storage/' . $Icon->image) }}" class="card-img-top" alt="{{ $Icon->name }}">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">{{ $Icon->name }}</h5>
+                                <p class="card-text text-muted small">{{ $Icon->description }}</p>
+                                <p class="card-text fw-bold mt-auto">{{ $Icon->price }} din</p>
+                                <a class="btn btn-warning w-100 text-white fw-bold" href="/shop">Pogledaj galeriju</a>
+                            </div>
+                        </div>
                     </div>
                 @endforeach
             </div>
-        </div>
-        @endsection
+        @else
+            <div class="alert alert-info mt-4 w-100 text-center" role="alert">
+                Nema pronađenih ikona za zadate kriterijume.
+            </div>
+        @endif
+
     </div>
-
-
-
+    <div class="d-flex justify-content-center mt-4" id="loadingSpinner" style="display: none;">
+        <div class="spinner-border text-warning" role="status">
+            <span class="visually-hidden">Učitavanje...</span>
+        </div>
+    </div>
+@endsection

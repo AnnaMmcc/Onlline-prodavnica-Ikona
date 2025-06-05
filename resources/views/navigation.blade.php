@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light light-bg">
     <div class="container-fluid">
 
-        <a class="navbar-brand text-brown" href="/">Andjel Šević<br>Ikonopisna radionica</a>
+        <a class="navbar-brand brand-logo" href="{{ url('/') }}">
+            <i class="fas fa-cross me-2 text-secondary"></i> Anđel Šević<br> Ikonopsina radionica
+        </a>
 
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExtra" aria-controls="navbarExtra" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +33,10 @@
                         </form>
                     </li>
                 @else
-                    <li class="nav-item"><a class="nav-link btn btn-outline-dark" href="{{ route('login') }}">Login</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-dark" href="{{ route('register') }}">Register</a></li>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-warning text-white fw-bold" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-warning text-white fw-bold" href="{{ route('register') }}">Register</a>
+                    </div>
                 @endif
 
                 @if(auth()->check() && auth()->user()->role === 'admin')
