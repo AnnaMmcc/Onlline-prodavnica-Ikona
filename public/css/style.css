@@ -41,3 +41,66 @@
     transform: scale(1.03);
 }
 
+h3 {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    font-family: 'Playfair Display', serif;
+    color: #6B4226;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+    font-family: 'Playfair Display', serif;
+    color: #6B4226;
+    margin-bottom: 1rem;
+}
+
+.ikonopis-uvod {
+    background-color: #F5F0E6; /* svetla pozadina u tonu pergamenta */
+    border-left: 4px solid #6B4226; /* tanka braon linija */
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ikonopis-citat {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #6B4226;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 1px rgba(107, 66, 38, 0.1);
+}
+
+.ikonopis-link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6B4226;
+    text-decoration: none;
+    border-bottom: 1px dashed #6B4226;
+    transition: all 0.2s ease-in-out;
+}
+
+.ikonopis-link:hover {
+    color: #3d2a1a;
+    border-bottom: 1px solid transparent;
+}
+
+.border-brown {
+    border-color: #6B4226 !important;
+}
+
+.text-brown {
+    color: #6B4226 !important;
+}
+
+blockquote {
+    font-size: 1.1rem;
+    background-color: #f8f4ed;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+

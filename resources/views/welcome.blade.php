@@ -3,9 +3,14 @@
     Ikonopisna radionica-Andjel Šević
 @endsection
 @section("Sadrzaj")
-    <div class="container d-flex flex-column align-items-center justify-content-start mt-5">
+    <div class="container d-flex flex-column align-items-center justify-content-start mt-1">
+        <div class="ikonopis-uvod text-center mb-5">
+            <p class="ikonopis-citat">
+                „Ikona nije samo umetnost — ona je prozor u Carstvo nebesko.“
+            </p>
+            <a href="/about" class="ikonopis-link">Saznaj više o značenju ikone &rarr;</a>
+        </div>
 
-        {{-- Forma za filtriranje --}}
         <form action="{{ route('icon.search') }}" method="GET" class="w-100 mb-4 p-4 border rounded shadow bg-white" style="max-width: 900px;">
             {{ csrf_field() }}
             <div class="row g-3">

@@ -25,9 +25,8 @@
 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 @if(\Illuminate\Support\Facades\Auth::check())
-                    <!-- Logout dugme -->
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-dark" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        <a class="nav-link btn btn-warning text-white fw-bold" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
