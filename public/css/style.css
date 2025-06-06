@@ -5,14 +5,14 @@
 .gold-bg {
     background-color: #ffba37;
 }
-.light-bg {
-    background-color: #F5F0E6 !important;
+.brown-bg {
+    background-color: #39160b !important;
 }
 .black-bg {
     background-color: #1A1A1A;
 }
 .text-brown {
-    color: #6B4226;
+    color: #39160b;
 }
 .border-brown {
     border: 2px solid #6B4226;
@@ -31,7 +31,7 @@
     font-size: 1.8rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #343a40; /* tamno siva, neutralna boja */
+    color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
@@ -104,3 +104,44 @@ blockquote {
     border-radius: 0.5rem;
 }
 
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 8px 20px rgba(92, 58, 33, 0.25);
+}
+
+.rounded-3 {
+    border-radius: 15px;
+}
+
+h6.h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+}
+
+h6.h1 strong {
+    display: block;
+}
+
+.w-full.sm\:max-w-md {
+    max-width: 400px;
+}
+
+@media (max-width: 640px) {
+    .w-full.sm\:max-w-md {
+        max-width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    margin-top: 1.5rem;
+    background: white;
+}

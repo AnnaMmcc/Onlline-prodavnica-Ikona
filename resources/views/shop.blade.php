@@ -3,6 +3,25 @@
     O nama-Ikonopisna radionica-Andjel Sevic
 @endsection
 @section("Sadrzaj")
+    <form action="{{ route('icon.search') }}" method="GET" class="w-100 mb-4 p-4 border rounded shadow bg-white" style="max-width: 900px;">
+        {{ csrf_field() }}
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4">
+                <input type="text" name="query" class="form-control" placeholder="Pretraži ikone..." value="{{ request('query') }}">
+            </div>
+            <div class="col-md-3 col-lg-2">
+                <input type="number" name="min_price" class="form-control" placeholder="Min cena..." value="{{ request('min_price') }}">
+            </div>
+            <div class="col-md-3 col-lg-2">
+                <input type="number" name="max_price" class="form-control" placeholder="Max cena..." value="{{ request('max_price') }}">
+            </div>
+            <div class="col-md-12 col-lg-4">
+                <button type="submit" class="btn btn-warning w-100 text-white fw-bold">
+                    Filtriraj
+                </button>
+            </div>
+        </div>
+    </form>
     <div class="container mt-4">
         <div class="card" style="width: 18rem;">
             @foreach($allIcons as $icon)

@@ -3,7 +3,7 @@
     O nama-Ikonopisna radionica-Andjel Sevic
 @endsection
 @section("Sadrzaj")
-    <div style="display: flex; justify-content: center; text-align: center; flex-direction: column; align-items: center;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
         <h3 class="text-brown">O Ikonopisnoj radionici - Anđel Šević</h3>
 
         <p>

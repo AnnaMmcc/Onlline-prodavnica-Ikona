@@ -14,7 +14,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>@yield("Naslov")</title>
 </head>
-<body class="d-flex flex-column min-vh-100 light-bg text-dark">
+<body class="d-flex flex-column min-vh-100 brown-bg text-white">
     @include("navigation")
     <main>
         <div class="container bg-light text-dark py-5 rounded">
