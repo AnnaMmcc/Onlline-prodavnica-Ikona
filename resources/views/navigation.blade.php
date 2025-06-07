@@ -2,7 +2,7 @@
     <div class="container-fluid">
 
         <a class="navbar-brand brand-logo text-white" href="{{ url('/') }}">
-            <i class="fas fa-cross me-2 text-secondary"></i> Анђел Шевић<br> Иконописна радионица
+             Анђел Шевић<br> Иконописна<br> радионица
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExtra" aria-controls="navbarExtra" aria-expanded="false" aria-label="Toggle navigation">

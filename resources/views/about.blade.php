@@ -30,38 +30,6 @@
             koji se po blagoslovu patrijarha moskovskog i cele Rusije Kirila proširio širom sveta,
             predstavljajući umetnike sakralnih umetnosti.
         </p>
-        <h4 class="text-brown mt-5 mb-3">Šta je zapravo ikona?</h4>
-
-        <p>
-            <strong>Ikona u stvaralačkom smislu</strong> je nepresušan izvor ideja i nadahnuća,
-            stalno traganje za što uverljivijom i lepšom slikom Boga.
-            U duhovnom smislu, ona je stalna komunikacija između Vaskrslog Gospoda i čoveka,
-            i <em>prozor u Carstvo Nebesko</em> koje svako može da pronađe u sebi.
-        </p>
-
-        <p>
-            Ikona nije ukras koji unosimo u domove i uklapamo u enterijere, boje zidova i nameštaj.
-            <strong>Ona je ogledalo, ali i portal između večnosti i sadašnjosti.</strong>
-            Ikona je slika nekog događaja u večnosti, u kojem mi aktivno učestvujemo u sadašnjem trenutku —
-            i time ispovedamo Boga.
-        </p>
-
-        <p>
-            U našem ateljeu, proces stvaranja teče kao i pre više od dve hiljade godina —
-            <em>onako kako je sveti Luka pisao prve ikone</em>.
-            Koristimo kvalitetne daske, grundirane rukom vrhunskih majstora, pisane jajčanom temperom i prirodnim pigmentima,
-            pozlaćene zlatnim listićima 23.75 ili 24 karata i lakirane po želji.
-        </p>
-
-        <p>
-            U ateljeu, pored gotovih ikona, možete se upoznati i sa samim procesom nastanka ikone,
-            osetiti put stvaranja i prisustvovati trenutku kada
-            <strong>rad kroz ruku ikonopisca postaje i umetničko i duhovno delo.</strong>
-        </p>
-
-        <blockquote class="mt-4 mb-5 ps-3 border-start border-3 border-brown fst-italic text-brown" style="max-width: 600px;">
-            Ikona je stvar božanstvena, no ne i obožena.
-        </blockquote>
 
     </div>
 @endsection

@@ -15,14 +15,18 @@
     <title>@yield("Naslov")</title>
 </head>
 <body class="d-flex flex-column min-vh-100 brown-bg text-white">
-    @include("navigation")
-    <main>
-        <div class="container bg-light text-dark py-5 rounded">
-            @yield("Sadrzaj")
-        </div>
-    </main>
-    @include("footer")
 
+@include('navigation')
+
+<main class="flex-grow-1">
+    <div class="container-fluid px-0">
+        <div class="content-wrapper bg-light text-dark py-5 px-3 px-md-5 rounded mx-auto">
+            @yield('Sadrzaj')
+        </div>
+    </div>
+</main>
+
+@include('footer')
 </body>
 </html>
 

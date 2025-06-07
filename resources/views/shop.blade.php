@@ -3,7 +3,7 @@
     O nama-Ikonopisna radionica-Andjel Sevic
 @endsection
 @section("Sadrzaj")
-    <div class="container mt-5">
+    <div class="container mt-1">
 
         <p>
             <strong>Икона у стваралачком смислу</strong> је непресушан извор идеја и надахнућа,
@@ -33,7 +33,7 @@
         </p>
 
 
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mt-3">
             <form action="{{ route('icon.search') }}" method="GET"
                   class="w-100 mb-4 p-4 border rounded shadow bg-white" style="max-width: 900px;">
                 {{ csrf_field() }}
