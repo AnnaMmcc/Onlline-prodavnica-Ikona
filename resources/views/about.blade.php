@@ -23,13 +23,10 @@
             <li><strong>29. tradicionalna izložba ikona</strong> – <em>Šabac</em> (2025)</li>
             <li><strong>Pogled u nebo</strong> – <em>Stara Pazova</em> (2025)</li>
             <li><strong>Zemaljsko je za malena carstvo, a nebesko uvek i do veka</strong> – <em>Green Door galerija, Beograd</em> (2025)</li>
+            <li><strong>Hristiansko Iskustvo</strong> - Tokom 2024. i 2025. godine učestvujemo u katalogu ,
+                koji se po blagoslovu patrijarha moskovskog i cele Rusije Kirila proširio širom sveta,
+                predstavljajući umetnike sakralnih umetnosti.</li>
         </ul>
-
-        <p>
-            Tokom 2024. i 2025. godine učestvujemo u katalogu <strong>Hristiansko Iskustvo</strong>,
-            koji se po blagoslovu patrijarha moskovskog i cele Rusije Kirila proširio širom sveta,
-            predstavljajući umetnike sakralnih umetnosti.
-        </p>
 
     </div>
 @endsection
