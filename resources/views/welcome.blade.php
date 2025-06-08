@@ -10,33 +10,27 @@
             </p>
             <a href="/about" class="ikonopis-link">Сазнај више о значењу иконе... &rarr;</a>
         </div>
-
-        @if($LastIcons->count() > 0)
-            <div class="row w-100 justify-content-center">
-                @foreach($LastIcons as $Icon)
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch">
-                        <div class="card h-100 shadow-sm border-0 hover-shadow transition">
-                            <img src="{{ asset('storage/' . $Icon->image) }}" class="card-img-top" alt="{{ $Icon->name }}">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">{{ $Icon->name }}</h5>
-                                <p class="card-text text-muted small">{{ $Icon->description }}</p>
-                                <p class="card-text fw-bold mt-auto">{{ $Icon->price }} дин</p>
-                                <a class="btn btn-warning w-100 text-white fw-bold" href="/shop">Погледај галерију</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset('storage/images/za sajt_8ac40d91-1255-47b2-863e-f8c32c1414b6.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('storage/images/IsusHristosPocetna.jpg') }}" class="d-block w-100" alt="...">
+                </div>
             </div>
-        @else
-            <div class="alert alert-info mt-4 w-100 text-center" role="alert">
-                Нема пронађених икона за задате критеријуме.
-            </div>
-        @endif
-
-    </div>
-    <div class="d-flex justify-content-center mt-4" id="loadingSpinner" style="display: none;">
-        <div class="spinner-border text-warning" role="status">
-            <span class="visually-hidden">Учитавање...</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </div>
+
 @endsection
