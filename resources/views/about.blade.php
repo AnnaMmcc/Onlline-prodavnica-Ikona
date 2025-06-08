@@ -4,29 +4,31 @@
 @endsection
 @section("Sadrzaj")
     <div style="display: flex; flex-direction: column; align-items: center;">
-        <h3 class="text-brown">O Ikonopisnoj radionici - Anđel Šević</h3>
+        <h3 class="text-brown">О Иконописној радионици - Анђел Шевић</h3>
 
         <p>
-            Atelje je osnovan 2020. godine u Inđiji. Juvelir po struci, ikonopisac po zanimanju,
-            nakon završenog kursa na Akademiji SPC u Beogradu kod prof. Mare Đurović,
-            počinje aktivno da se bavi ikonopisom.
+            Атеље је основан 2020. године у Инђији. Јувелир по струци, иконописац по занимању,
+            након завршеног курса на Академији СПЦ у Београду код проф. Маре Ђуровић,
+            почиње активно да се бави иконописом.
         </p>
 
-        <p>Atelje je učestvovao na nekoliko izložbi do sada:</p>
+        <p>Атеље је учествовао на неколико изложби до сада:</p>
 
         <ul class="ikonopis-list" style="list-style-position: inside; padding-left: 0; max-width: 600px; text-align: left;">
-            <li><strong>Propoved o bojama o Bogorodici</strong> – <em>Konak knjeginje Ljubice, Beograd</em> (2022)</li>
-            <li><strong>Svetlopisi za Siriju</strong> – <em>Galerija Progres, Beograd</em> (2023)</li>
-            <li><strong>Put duhovnosti</strong> – <em>KO centar Rakovica, Beograd</em> (2022)</li>
-            <li><strong>Svetoslavlje Pravoslavlje</strong> – <em>Kripta hrama Svetog Save, Beograd</em> (2022)</li>
-            <li><strong>Portret na ikoni</strong> – <em>Kolarčeva zadužbina, Beograd</em> (2024)</li>
-            <li><strong>29. tradicionalna izložba ikona</strong> – <em>Šabac</em> (2025)</li>
-            <li><strong>Pogled u nebo</strong> – <em>Stara Pazova</em> (2025)</li>
-            <li><strong>Zemaljsko je za malena carstvo, a nebesko uvek i do veka</strong> – <em>Green Door galerija, Beograd</em> (2025)</li>
-            <li><strong>Hristiansko Iskustvo</strong> - Tokom 2024. i 2025. godine učestvujemo u katalogu ,
-                koji se po blagoslovu patrijarha moskovskog i cele Rusije Kirila proširio širom sveta,
-                predstavljajući umetnike sakralnih umetnosti.</li>
+            <li><strong>Проповед о бојама о Богородици</strong> – <em>Конак кнегиње Љубице, Београд</em> (2022)</li>
+            <li><strong>Светлописи за Сирију</strong> – <em>Галерија Прогрес, Београд</em> (2023)</li>
+            <li><strong>Пут духовности</strong> – <em>КО центар Раковица, Београд</em> (2022)</li>
+            <li><strong>Светославље Православље</strong> – <em>Крипта храма Светог Саве, Београд</em> (2022)</li>
+            <li><strong>Портрет на икони</strong> – <em>Коларчева задужбина, Београд</em> (2024)</li>
+            <li><strong>29. традиционална изложба икона</strong> – <em>Шабац</em> (2025)</li>
+            <li><strong>Поглед у небо</strong> – <em>Стара Пазова</em> (2025)</li>
+            <li><strong>Земаљско је за малена царство, а небеско увек и до века</strong> – <em>Green Door галерија, Београд</em> (2025)</li>
+            <li><strong>Христианско Искуство</strong> – Током 2024. и 2025. године учествујемо у каталогу,
+                који се по благослову патријарха московског и целе Русије Кирила проширио широм света,
+                представљајући уметнике сакралних уметности.
+            </li>
         </ul>
+
 
     </div>
 @endsection

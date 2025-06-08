@@ -28,7 +28,7 @@
 }
 .brand-logo {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 1.0rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: white;
@@ -89,12 +89,6 @@ h5 {
     border-bottom: 1px solid transparent;
 }
 
-blockquote {
-    font-size: 1.1rem;
-    background-color: #f8f4ed;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
-}
 
 .navbar .nav-link,
 .navbar .navbar-brand {
@@ -115,7 +109,7 @@ blockquote {
 }
 
 h6.h1 {
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: 700;
     font-family: 'Arial', sans-serif;
 }
@@ -187,3 +181,4 @@ p, h1, h2, h3, h4, h5, h6, a, span {
     word-break: break-word;
     overflow-wrap: break-word;
 }
+

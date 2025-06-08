@@ -1,9 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light brown-bg">
     <div class="container-fluid">
 
-        <a class="navbar-brand brand-logo text-white" href="{{ url('/') }}">
-             Анђел Шевић<br> Иконописна<br> радионица
+        <a class="navbar-brand brand-logo text-white d-flex align-items-center gap-2" href="{{ url('/') }}">
+            <img src="{{ asset('storage/images/1000000645.jpg') }}" alt="Лого" style="height: 60px;">
+            <span>
+        Анђел Шевић<br>
+        Иконописна<br>
+        радионица
+    </span>
         </a>
+
+
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExtra" aria-controls="navbarExtra" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
