@@ -111,15 +111,15 @@ class IconsController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
-        // Ažuriraj osnovna polja
+
         $icon->name = $validated['name'];
         $icon->description = $validated['description'];
         $icon->amount = $validated['amount'];
         $icon->price = $validated['price'];
 
-        // Ako je poslata nova slika
+
         if ($request->hasFile('image')) {
-            // Obriši staru sliku ako postoji
+
             if ($icon->image && file_exists(public_path('images/' . $icon->image))) {
                 unlink(public_path('images/' . $icon->image));
             }
