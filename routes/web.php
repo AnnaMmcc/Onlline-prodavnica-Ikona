@@ -12,6 +12,7 @@ Route::get("/shop/{id}", [\App\Http\Controllers\ShopController::class, 'permalin
 
 
 Route::middleware(['auth'])->group(function () {
+
     Route::post("/cart/add", [\App\Http\Controllers\OrderController::class, 'addToCart'])->name('cart.add');
     Route::get('/cart', [\App\Http\Controllers\OrderController::class, 'index'])->name('cart');
     Route::delete('/cart/remove/{product_id}', [\App\Http\Controllers\OrderController::class, 'remove'])->name('cart.remove');
