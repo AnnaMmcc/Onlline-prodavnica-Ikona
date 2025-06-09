@@ -1,6 +1,6 @@
 @extends("layout")
 @section("Naslov")
-    Ikonopisna radionica-Andjel Šević
+    Иконописна радионица Анђел Шевић
 @endsection
 @section("Sadrzaj")
     <div class="container d-flex flex-column align-items-center justify-content-start mt-1">

@@ -1,6 +1,6 @@
 @extends("layout")
 @section("Naslov")
-    O nama-Ikonopisna radionica-Andjel Sevic
+    Продавница|Иконописна радионица-Анђел Шевић
 @endsection
 @section("Sadrzaj")
     <div class="container mt-1">

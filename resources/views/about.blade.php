@@ -1,6 +1,6 @@
 @extends("layout")
 @section("Naslov")
-    O nama-Ikonopisna radionica-Andjel Sevic
+    O nama|Ikonopisna radionica-Andjel Sevic
 @endsection
 @section("Sadrzaj")
     <div style="display: flex; flex-direction: column; align-items: center;">

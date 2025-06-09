@@ -1,6 +1,6 @@
 @extends("layout")
 @section("Naslov")
-    O nama-Ikonopisna radionica-Andjel Sevic
+    Kонтакт|Иконописна радионица-Анђел Шевић
 @endsection
 @section("Sadrzaj")
     Text

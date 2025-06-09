@@ -1,5 +1,7 @@
 @extends('layout')
-
+@section('Naslov')
+    Поруџбина|Иконописна радионица-Анђел Шевић
+@endsection
 @section('Sadrzaj')
     <div class="container col-lg-6 mt-3">
         <h2>Izmeni porudžbinu #{{ $order->id }}</h2>

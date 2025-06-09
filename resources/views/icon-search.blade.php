@@ -1,6 +1,6 @@
 @extends("layout")
 @section("Naslov")
-    Pretraga
+    Претрага|Иконописна радионица-Анђел Шевић
 @endsection
 @section("Sadrzaj")
   <div class="container">
