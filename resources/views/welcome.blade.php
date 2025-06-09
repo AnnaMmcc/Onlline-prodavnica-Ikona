@@ -6,7 +6,7 @@
     <div class="container d-flex flex-column align-items-center justify-content-start mt-1">
         <div class="ikonopis-uvod text-center mb-5">
             <p class="ikonopis-citat">
-                „Икона је ствар божанствена, но не и обожена.“ - А.Ш.
+                „Икона је ствар божанствена, но не и обожена.“
             </p>
             <a href="/about" class="ikonopis-link">Сазнај више о значењу иконе... &rarr;</a>
         </div>
