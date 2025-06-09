@@ -181,16 +181,7 @@ p, h1, h2, h3, h4, h5, h6, a, span {
     word-break: break-word;
     overflow-wrap: break-word;
 }
-#carouselExampleIndicators {
-    max-height: 100vh;
-    overflow: hidden;
-}
 
-#carouselExampleIndicators .carousel-item img {
-    object-fit: cover;
-    height: 100vh;
-    width: 100%;
-}
 footer a {
     transition: color 0.3s ease;
 }
