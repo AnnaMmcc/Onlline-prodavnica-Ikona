@@ -23,9 +23,10 @@
                         </button>
                     </form>
                 @else
-                    <a href="{{ route('register') }}" class="btn btn-warning w-100 text-white fw-bold" title="Направите налог да бисте додали икону у корпу">
+                    <a href="{{ route('register', ['redirect' => request()->fullUrl()]) }}" class="btn btn-warning w-100 text-white fw-bold" title="Улогујте се да бисте додали у корпу">
                         Додај у корпу
                     </a>
+
                 @endauth
 
             </div>

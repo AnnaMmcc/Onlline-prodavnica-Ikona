@@ -37,15 +37,19 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm hover:text-brown dark:hover:text-brown rounded-md focus:outline-none focus:ring-2 focus:light-bg dark:focus:light-bg" href="{{ route('login') }}">
-                {{ __('Већ сте регистровани?') }}
-            </a>
+            @if(request()->has('redirect'))
+                <input type="hidden" name="redirect" value="{{ request('redirect') }}">
+            @endif
 
-            <x-primary-button class="ms-4">
-                {{ __('Региструј се') }}
-            </x-primary-button>
-        </div>
+            <div class="flex items-center justify-end mt-4">
+                <a href="{{ route('login', ['redirect' => request('redirect')]) }}">
+                    Већ сте регистровани?
+                </a>
+
+                <x-primary-button class="ms-4">
+                    {{ __('Региструј се') }}
+                </x-primary-button>
+            </div>
     </form>
 </x-guest-layout>
 

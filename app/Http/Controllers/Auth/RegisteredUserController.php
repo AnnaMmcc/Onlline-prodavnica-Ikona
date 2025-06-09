@@ -46,10 +46,12 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
+        Auth::login($user);
+
         if ($request->filled('redirect')) {
-            session()->put('url.intended', $request->input('redirect'));
+            return redirect($request->input('redirect'));
         }
 
-        return redirect()->intended(route('home'));
+        return redirect()->route('home');
     }
 }
