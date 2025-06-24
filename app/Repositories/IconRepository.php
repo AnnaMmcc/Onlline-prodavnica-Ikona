@@ -20,6 +20,7 @@ class IconRepository
         "amount" =>  $data['amount'],
         "price" =>  $data['price'],
         "image" =>  $data['image'],
+        "is_available" => isset($data['is_available']) ? 1 : 0
     ]);
     }
 }

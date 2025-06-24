@@ -22,7 +22,7 @@ class IconsController extends Controller
     }
     public function saveNewIcon(IconRequest $request)
     {
-     $data = $request->only(["name", "description", "amount", "price", ]);
+     $data = $request->only(["name", "description", "amount", "price","is_available" ]);
 
      if($request->hasFile("image"))
      {
@@ -116,6 +116,7 @@ class IconsController extends Controller
         $icon->description = $validated['description'];
         $icon->amount = $validated['amount'];
         $icon->price = $validated['price'];
+        $icon->is_available = $request->has('is_available');
 
 
         if ($request->hasFile('image')) {
