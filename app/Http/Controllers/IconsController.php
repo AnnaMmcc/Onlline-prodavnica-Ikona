@@ -108,7 +108,7 @@ class IconsController extends Controller
             'description' => 'required|string|max:1000',
             'amount' => 'required|integer|min:0',
             'price' => 'required|numeric|min:0',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:5120',
         ]);
 
 

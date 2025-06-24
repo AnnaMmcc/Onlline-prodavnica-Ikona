@@ -9,7 +9,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{$id->name}}</h5>
                 <p class="card-text">{{$id->description}}</p>
-                <h6 class="card-text">{{$id->price}} RSD</h6>
+                <h6 class="card-text"><strong>{{$id->price}} RSD</strong></h6>
                 @auth
                     <form method="POST" action="{{ route('cart.add') }}">
                         {{ csrf_field() }}

@@ -26,7 +26,7 @@ class IconRequest extends FormRequest
             "description" => "required|string|min:5",
             "amount" => "required|int|min:0",
             "price" => "required|int|min:0",
-            "image" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048"
+            "image" => "image|mimes:jpeg,png,jpg,gif,svg|max:10120"
         ];
     }
 }

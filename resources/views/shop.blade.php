@@ -68,7 +68,7 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">{{ $icon->name }}</h5>
                             <p class="card-text">{{ $icon->description }}</p>
-                            <h6 class="card-text">{{ $icon->price }} дин</h6>
+                            <h6 class="card-text"><strong>{{ $icon->price }} дин</strong></h6>
                             <a href="{{ route('permalink', ['id' => $icon->id]) }}"
                                class="btn btn-warning mt-auto text-white fw-bold">
                                 Погледај
