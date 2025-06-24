@@ -29,6 +29,10 @@
                 <label for="image">Slika</label>
                 <input name="image" type="file" class="form-control" id="image"  placeholder="Unesite sliku ikone">
             </div>
+            <div class="form-check mb-2">
+                <label class="form-check-label" for="is_available"> - Dostupno odmah</label>
+                <input name="is_available" type="checkbox" class="form-check-input" id="is_available">
+            </div>
 
             <button class="btn btn-primary" type="submit">Sacuvaj</button>
         </form>

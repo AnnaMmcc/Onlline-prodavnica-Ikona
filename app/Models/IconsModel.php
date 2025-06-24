@@ -9,7 +9,7 @@ class IconsModel extends Model
     protected $table = "products";
 
     protected $fillable = [
-        "name","description","price","amount","image",
+        "name","description","price","amount","image","is_available"
     ];
 
     public function orders()
