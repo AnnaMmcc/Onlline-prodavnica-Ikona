@@ -9,7 +9,7 @@ Route::view("/about" , 'about');
 Route::view("/contact", "contact");
 Route::get("/shop", [\App\Http\Controllers\ShopController::class, 'index']);
 Route::get("/shop/{id}", [\App\Http\Controllers\ShopController::class, 'permalink'])->name('permalink');
-
+Route::view("/info", "info")->name("info");
 
 Route::middleware(['auth'])->group(function () {
 
