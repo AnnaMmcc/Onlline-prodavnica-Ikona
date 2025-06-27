@@ -60,27 +60,34 @@
         </div>
 
 
-        <div class="row justify-content-center">
-            @forelse($allIcons as $icon)
-                <div class="col-md-6 col-lg-4 mb-4 d-flex">
-                    <div class="card w-100 h-100">
-                        <img src="{{ url('storage/' . $icon->image) }}" class="card-img-top" alt="{{ $icon->name }}">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ $icon->name }}</h5>
-                            <p class="card-text">{{ $icon->description }}</p>
-                            <h6 class="card-text"><strong>{{ $icon->price }} дин</strong></h6>
-                            <a href="{{ route('permalink', ['id' => $icon->id]) }}"
-                               class="btn btn-warning mt-auto text-white fw-bold">
-                                Погледај
-                            </a>
+        @if($allIcons->isEmpty())
+            <p class="text-center">Тренутно нема икона које одговарају претрази.</p>
+        @else
+            <div class="row justify-content-center">
+                @foreach($allIcons as $icon)
+                    <div class="col-md-6 col-lg-4 mb-4 d-flex">
+                        <div class="card w-100 h-100">
+                            <img src="{{ url('storage/' . $icon->image) }}" class="card-img-top" alt="{{ $icon->name }}">
+
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">{{ $icon->name }}</h5>
+                                <p class="card-text">{{ $icon->description }}</p>
+                                <h6 class="card-text"><strong>{{ $icon->price }} дин</strong></h6>
+
+                                @if($icon->is_available)
+                                    <a href="{{ route('permalink', ['id' => $icon->id]) }}"
+                                       class="btn btn-warning mt-auto text-white fw-bold">
+                                        Погледај
+                                    </a>
+                                @else
+                                    <span class="text-danger mt-auto fw-bold">Није доступно</span>
+                                @endif
+                            </div>
                         </div>
                     </div>
-                </div>
-            @empty
-                <p class="text-center">Тренутно нема икона које одговарају претрази.</p>
-            @endforelse
-        </div>
-    </div>
+                @endforeach
+            </div>
+    @endif
 @endsection
 
 

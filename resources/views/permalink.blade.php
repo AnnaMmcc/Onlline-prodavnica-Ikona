@@ -4,7 +4,7 @@
 @endsection
 @section("Sadrzaj")
     <div class="container d-flex justify-content-center align-items-center mt-3">
-        <div class="card" style="width: 18rem;">
+        <div class="card w-100 w-sm-75 w-md-50 mx-auto">
             <img src="{{ asset('storage/' . $id->image) }}" class="card-img-top" alt="{{$id->name}}">
             <div class="card-body">
                 <h5 class="card-title">{{$id->name}}</h5>
