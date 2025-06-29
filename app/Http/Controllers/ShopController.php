@@ -9,9 +9,10 @@ class ShopController extends Controller
 {
     public function index()
     {
-        $allIcons = IconsModel::all();
+        $availableIcons = IconsModel::where('is_available', 1)->get();
+        $unavailableIcons = IconsModel::where('is_available', 0)->get();
 
-        return view("shop", compact("allIcons"));
+        return view("shop", compact('availableIcons', 'unavailableIcons'));
     }
 
     public function permalink(IconsModel $id)

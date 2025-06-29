@@ -31,6 +31,9 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+            <div class="ikonopis-uvod text-center m-5">
+                <a href="{{route('info')}}" class="ikonopis-link">Како поручити икону ?&rarr;</a>
+            </div>
         </div>
 
 @endsection

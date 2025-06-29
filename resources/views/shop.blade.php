@@ -4,7 +4,6 @@
 @endsection
 @section("Sadrzaj")
     <div class="container mt-1">
-
         <p>
             <strong>Икона у стваралачком смислу</strong> је непресушан извор идеја и надахнућа,
             стално трагање за што уверљивијом и лепшом сликом Бога.
@@ -32,6 +31,9 @@
             <strong>рад кроз руку иконописца постаје и уметничко и духовно дело.</strong>
         </p>
 
+        <div class="ikonopis-uvod text-center m-5">
+            <a href="{{route('info')}}" class="ikonopis-link">Како поручити икону ?&rarr;</a>
+        </div>
 
         <div class="d-flex justify-content-center mt-3">
             <form action="{{ route('icon.search') }}" method="GET"
@@ -60,34 +62,46 @@
         </div>
 
 
-        @if($allIcons->isEmpty())
+        @if($availableIcons->isEmpty() && $unavailableIcons->isEmpty())
             <p class="text-center">Тренутно нема икона које одговарају претрази.</p>
         @else
+
             <div class="row justify-content-center">
-                @foreach($allIcons as $icon)
+                @foreach($availableIcons as $icon)
                     <div class="col-md-6 col-lg-4 mb-4 d-flex">
                         <div class="card w-100 h-100">
                             <img src="{{ url('storage/' . $icon->image) }}" class="card-img-top" alt="{{ $icon->name }}">
-
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">{{ $icon->name }}</h5>
                                 <p class="card-text">{{ $icon->description }}</p>
                                 <h6 class="card-text"><strong>{{ $icon->price }} дин</strong></h6>
-
-                                @if($icon->is_available)
-                                    <a href="{{ route('permalink', ['id' => $icon->id]) }}"
-                                       class="btn btn-warning mt-auto text-white fw-bold">
-                                        Погледај
-                                    </a>
-                                @else
-                                    <span class="text-danger mt-auto fw-bold">Није доступно</span>
-                                @endif
+                                <a href="{{ route('permalink', ['id' => $icon->id]) }}" class="btn btn-warning mt-auto text-white fw-bold">
+                                    Погледај
+                                </a>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-    @endif
+
+
+            @if($unavailableIcons->isNotEmpty())
+                <h4 class="mt-5 mb-3 text-center">Галерија</h4>
+                <div class="row justify-content-center">
+                    @foreach($unavailableIcons as $icon)
+                        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+                            <div class="card w-100 h-100">
+                                <img src="{{ url('storage/' . $icon->image) }}" class="card-img-top" alt="{{ $icon->name }}">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">{{ $icon->name }}</h5>
+                                    <p class="card-text">{{ $icon->description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+             @endif
+         @endif
 @endsection
 
 
