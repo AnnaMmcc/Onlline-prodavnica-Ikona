@@ -2,9 +2,9 @@
 @section("Naslov")
     Продавница|Иконописна радионица-Анђел Шевић
 @endsection
-@section('title', 'Galerija ikona - Ikonopisna radionica Anđel Šević')
 
 @section('meta_description', 'Pogledajte našu bogatu galeriju pravoslavnih ikona. Svaka ikona ručno rađena sa posebnom pažnjom.')
+
 @section("Sadrzaj")
     <div class="container mt-1">
         <p>

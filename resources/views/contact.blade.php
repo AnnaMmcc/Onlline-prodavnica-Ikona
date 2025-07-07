@@ -2,7 +2,6 @@
 @section("Naslov")
     Kонтакт|Иконописна радионица-Анђел Шевић
 @endsection
-@section('title', 'Galerija ikona - Ikonopisna radionica Anđel Šević - Ikona - Kontakt')
 
 @section('meta_description', 'Pogledajte našu bogatu galeriju pravoslavnih ikona. Svaka ikona ručno rađena sa posebnom pažnjom.Kontaktirajte nas')
 @section("Sadrzaj")

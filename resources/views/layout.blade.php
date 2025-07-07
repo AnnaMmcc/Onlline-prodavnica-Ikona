@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Ikonopisna radionica Anđel Sević - Online prodaja ikona')</title>
 
     <meta name="description" content="@yield('meta_description', 'Kupite unikatne pravoslavne ikone iz radionice Anđel Sević. Ručno rađene i dostupne online.')">
 
