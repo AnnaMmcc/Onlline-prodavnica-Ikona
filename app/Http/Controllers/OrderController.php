@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CartAddRequest;
+use App\Http\Requests\CheckoutRequest;
 use App\Models\IconsModel;
 use App\Models\Order;
 use App\Models\OrderItemsModel;
@@ -12,6 +13,12 @@ use Illuminate\Support\Facades\Session;
 
 class OrderController extends Controller
 {
+    protected $orderRepo;
+
+    public function __construct(OrderRepository $orderRepo)
+    {
+        $this->orderRepo = $orderRepo;
+    }
 
     public function addContact(Request $request)
     {
@@ -80,62 +87,22 @@ class OrderController extends Controller
     }
 
 
-    public function checkout(Request $request)
+    public function checkout(CheckoutRequest $request)
     {
-        $request->validate([
-            'payment_method' => 'required|in:card,cash',
-            'phone' => 'required|string|min:6|max:20',
-        ]);
-
-        $user = auth()->user();
-
-        if ($user && $user->phone !== $request->phone) {
-            $user->phone = $request->phone;
-            $user->save();
-        }
-
         $cart = Session::get('product', []);
 
-        if (count($cart) < 1) {
-            return redirect('/cart')->with('error', 'Korpa je prazna.');
+        $result = $this->orderRepo->createOrderWithItems(
+            $cart,
+            $request->payment_method,
+            $request->phone
+        );
+
+        if (isset($result['error'])) {
+            return redirect('/cart')->with('error', $result['error']);
         }
 
-        $combine = collect($cart)->map(function ($item) {
-            $product = IconsModel::find($item['product_id']);
-            if (!$product) return null;
-
-            return [
-                'product_id' => $product->id,
-                'quantity' => $item['amount'],
-                'price' => $product->price,
-                'total' => $item['amount'] * $product->price,
-            ];
-        })->filter()->values();
-
-        $totalPrice = $combine->sum('total');
-
-
-        $order = Order::create([
-            'user_id' => auth()->id(),
-            'status' => 'pending',
-            'total_price' => $totalPrice,
-            'payment_method' => $request->payment_method,
-        ]);
-
-
-        foreach ($combine as $item) {
-            OrderItemsModel::create([
-                'order_id' => $order->id,
-                'product_id' => $item['product_id'],
-                'quantity' => $item['quantity'],
-                'price' => $item['price'],
-            ]);
-        }
-
-
-        Session::forget('product');
-
-        return redirect()->route('order.' . $request->payment_method)->with('order_id', $order->id);
+        return redirect()->route('order.' . $request->payment_method)
+            ->with('order_id', $result['order']->id);
     }
 
     public function card()
