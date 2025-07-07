@@ -10,11 +10,10 @@
     </span>
         </a>
 
-
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExtra" aria-controls="navbarExtra" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExtra" aria-controls="navbarExtra" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler-text">Мени <i class="fas fa-chevron-down"></i></span>
         </button>
+
 
         <div class="collapse navbar-collapse" id="navbarExtra">
 

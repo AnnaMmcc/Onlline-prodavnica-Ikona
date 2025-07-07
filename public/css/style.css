@@ -97,8 +97,28 @@ h5 {
 
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-color: white !important;
 }
+
+.custom-toggler {
+    background-color: white;
+    border: 1px solid #5c2c2c;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.custom-toggler .toggler-text {
+    color: #5c2c2c;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.custom-toggler .fa-chevron-down {
+    font-size: 0.8em;
+}
+
 
 .shadow-lg {
     box-shadow: 0 8px 20px rgba(92, 58, 33, 0.25);
@@ -122,14 +142,6 @@ h6.h1 strong {
     max-width: 400px;
 }
 
-@media (max-width: 640px) {
-    .w-full.sm\:max-w-md {
-        max-width: 100%;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
 .login-container {
     max-width: 400px;
     width: 100%;
@@ -145,20 +157,6 @@ h6.h1 strong {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin: 0 auto;
     padding: 2rem;
-}
-
-
-@media (max-width: 768px) {
-    .content-wrapper {
-        max-width: 100%;
-        border-radius: 0;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-        margin: 0;
-        box-shadow: none;
-        color: #000;
-        background-color: #fff !important;
-    }
 }
 
 
@@ -189,4 +187,26 @@ footer a {
 footer a:hover {
     color: #df9b11;
 }
+
+@media (max-width: 640px) {
+    .w-full.sm\:max-w-md {
+        max-width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        max-width: 100%;
+        border-radius: 0;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        margin: 0;
+        box-shadow: none;
+        color: #000;
+        background-color: #fff !important;
+    }
+}
+
 
