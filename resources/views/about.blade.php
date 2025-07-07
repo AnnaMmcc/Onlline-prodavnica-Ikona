@@ -2,6 +2,9 @@
 @section("Naslov")
     O nama|Ikonopisna radionica-Andjel Sevic
 @endsection
+@section('title', 'Galerija ikona - Ikonopisna radionica Anđel Sević  - O nama')
+
+@section('meta_description', 'Pogledajte našu bogatu galeriju pravoslavnih ikona i stranicu o nama, videcete na kojim je izlozbama ucestvovala Ikonopisna radionica Anđel Šević. Svaka ikona ručno rađena sa posebnom pažnjom.')
 @section("Sadrzaj")
     <div style="display: flex; flex-direction: column; align-items: center;">
         <h3 class="text-brown">О Иконописној радионици - Анђел Шевић</h3>

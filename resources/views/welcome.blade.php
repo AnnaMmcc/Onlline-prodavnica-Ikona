@@ -2,6 +2,10 @@
 @section("Naslov")
     Иконописна радионица Анђел Шевић
 @endsection
+@section('title', 'Ikonopisna radionica Anđel Šević - Ručno rađene ikone online')
+
+@section('meta_description', 'Kupite unikatne ručno rađene pravoslavne ikone iz naše galerije. Tradicija, umetnost i duhovnost spojeni u ikonama.')
+
 @section("Sadrzaj")
     <div class="container d-flex flex-column align-items-center justify-content-start mt-1">
         <div class="ikonopis-uvod text-center mb-5">

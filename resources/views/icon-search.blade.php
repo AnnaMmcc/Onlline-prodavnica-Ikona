@@ -4,7 +4,7 @@
 @endsection
 @section("Sadrzaj")
   <div class="container">
-      <h2>Rezultati pretrage za: "{{$query}}"</h2>
+      <h2>Резултати претраге за: "{{$query}}"</h2>
       @if($results->count())
           <div class="row">
               @foreach($results as $icon)
@@ -22,7 +22,7 @@
               @endforeach
           </div>
       @else
-          <p>Nema rezultata sa zadatim pojmom</p>
+          <p>Нема резултата са задатим појмом</p>
       @endif
   </div>
 @endsection

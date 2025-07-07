@@ -2,6 +2,9 @@
 @section("Naslov")
     Икона|Иконописна радионица-Анђел Шевић
 @endsection
+@section('title', 'Galerija ikona - Ikonopisna radionica Anđel Sević - Ikona -'. $id->name)
+
+@section('meta_description', 'Pogledajte našu bogatu galeriju pravoslavnih ikona. Svaka ikona ručno rađena sa posebnom pažnjom.'. $id->description)
 @section("Sadrzaj")
     <div class="container d-flex justify-content-center align-items-center mt-3">
         <div class="card w-100 w-sm-75 w-md-50 mx-auto">

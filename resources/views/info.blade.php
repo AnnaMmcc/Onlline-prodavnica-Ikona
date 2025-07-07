@@ -2,6 +2,9 @@
 @section("Naslov")
     Како поручити|Ikonopisna radionica-Andjel Sevic
 @endsection
+@section('title', 'Kako poruciti ikonu - Ikonopisna radionica Anđel Šević - Ikona')
+
+@section('meta_description', 'Pogledajte našu bogatu galeriju pravoslavnih ikona i način na koji se iste mogu poručiti. Svaka ikona ručno rađena sa posebnom pažnjom.')
 @section("Sadrzaj")
     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
         <h3 class="text-brown"><i class="fas fa-question-circle me-2"></i>Како поручити икону?</h3>
