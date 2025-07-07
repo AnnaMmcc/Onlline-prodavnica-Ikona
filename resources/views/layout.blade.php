@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="@yield('meta_description', 'Kupite unikatne pravoslavne ikone iz radionice Anđel Sević. Ručno rađene i dostupne online.')">
+    <meta name="description" content="@yield('meta_description', 'Kupite unikatne pravoslavne ikone iz radionice Anđel Šević. Ručno rađene i dostupne online.')">
 
     <meta property="og:title" content="@yield('title', 'Ikonopisna radionica Anđel Sević')">
     <meta property="og:description" content="@yield('meta_description', 'Kupite pravoslavne, ručno rađene ikone.')">
