@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\IconRequest;
+use App\Http\Requests\UpdateIconRequest;
 use App\Models\IconsModel;
 use App\Repositories\IconRepository;
 use Illuminate\Http\Request;
@@ -99,38 +100,16 @@ class IconsController extends Controller
         return view('admin.edit', compact('icon'));
     }
 
-    public function update(Request $request,$id)
+    public function update(UpdateIconRequest $request,$id)
     {
-        $icon = IconsModel::findOrFail($id);
-
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string|max:1000',
-            'amount' => 'required|integer|min:0',
-            'price' => 'required|numeric|min:0',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:5120',
-        ]);
-
-
-        $icon->name = $validated['name'];
-        $icon->description = $validated['description'];
-        $icon->amount = $validated['amount'];
-        $icon->price = $validated['price'];
-        $icon->is_available = $request->has('is_available');
+        $data = $request->only(['name', 'description', 'amount', 'price', 'is_available']);
 
 
         if ($request->hasFile('image')) {
-
-            if ($icon->image && file_exists(public_path('images/' . $icon->image))) {
-                unlink(public_path('images/' . $icon->image));
-            }
-
-            $imageName = \Illuminate\Support\Str::uuid() . '.' . $request->image->getClientOriginalExtension();
-            $path = $request->file('image')->storeAs('images', $imageName, 'public');
-            $icon->image = 'images/' . $imageName;
+            $data['image'] = $request->file('image');
         }
 
-        $icon->save();
+        $this->IconsRepo->updateIcon($id, $data);
 
         return redirect()->route('products.all')->with('success', 'Proizvod uspešno ažuriran!');
     }
