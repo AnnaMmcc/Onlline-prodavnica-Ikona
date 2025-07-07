@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CartAddRequest;
 use App\Http\Requests\CheckoutRequest;
+use App\Http\Requests\UpdateOrderRequest;
 use App\Models\IconsModel;
 use App\Models\Order;
 use App\Models\OrderItemsModel;
+use App\Repositories\OrderRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -140,17 +142,9 @@ class OrderController extends Controller
         return view('orders-edit', compact('order'));
     }
 
-    public function update(Request $request, Order $order)
+    public function update(UpdateOrderRequest $request, Order $order)
     {
-        $request->validate([
-            'status' => 'required|string',
-            'payment_method' => 'required|string|in:card,cash',
-        ]);
-
-        $order->update([
-            'status' => $request->status,
-            'payment_method' => $request->payment_method,
-        ]);
+        $this->orderRepo->updateOrder($order, $request->only(['status', 'payment_method']));
 
         return redirect()->route('all.orders')->with('success', 'Porudžbina je uspešno izmenjena.');
     }

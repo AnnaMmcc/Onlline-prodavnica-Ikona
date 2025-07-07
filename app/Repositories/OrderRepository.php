@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Session;
 
 class OrderRepository
 {
-    public function createOrderWithItems(array $cart, string $paymentMethod, string $phone)
+    public function createOrderWithItems(array $cart, string $paymentMethod, string $phone): array
     {
         $user = auth()->user();
 
@@ -60,6 +60,14 @@ class OrderRepository
         Session::forget('product');
 
         return ['order' => $order];
+    }
+
+    public function updateOrder(Order $order, array $data)
+    {
+        return $order->update([
+            'status' => $data['status'],
+            'payment_method' => $data['payment_method'],
+        ]);
     }
 }
 
