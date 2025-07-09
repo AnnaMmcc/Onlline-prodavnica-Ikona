@@ -188,6 +188,31 @@ footer a:hover {
     color: #df9b11;
 }
 
+.ikonopis-tekst {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    color: #3a2a1a;
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.ikonopis-tekst p {
+    margin-bottom: 1.5rem;
+}
+
+.ikonopis-tekst strong {
+    color: #6B4226;
+}
+
+.ikonopis-tekst em {
+    font-style: italic;
+    color: #a05a2c;
+}
+
+
 @media (max-width: 640px) {
     .w-full.sm\:max-w-md {
         max-width: 100%;
