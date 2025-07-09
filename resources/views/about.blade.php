@@ -4,7 +4,7 @@
 @endsection
 @section('meta_description', 'Pogledajte našu bogatu galeriju pravoslavnih ikona i stranicu o nama, videcete na kojim je izlozbama ucestvovala Ikonopisna radionica Anđel Šević. Svaka ikona ručno rađena sa posebnom pažnjom.')
 @section("Sadrzaj")
-    <div class="ikonopis-tekst my-5">
+    <div class="ikonopis-tekst my-4">
 
         <h3 class="text-center text-brown mb-4">Иконописна радионица - Анђел Шевић</h3>
 

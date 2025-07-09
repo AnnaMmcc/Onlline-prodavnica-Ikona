@@ -7,12 +7,6 @@
 
 @section("Sadrzaj")
     <div class="container d-flex flex-column align-items-center justify-content-start mt-1">
-        <div class="ikonopis-uvod text-center mb-5">
-            <p class="ikonopis-citat">
-                „Икона је ствар божанствена, но не и обожена.“
-            </p>
-            <a href="/about" class="ikonopis-link">Сазнај више о значењу иконе... &rarr;</a>
-        </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
@@ -34,6 +28,12 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+            <div class="ikonopis-uvod text-center mb-5">
+                <p class="ikonopis-citat">
+                    „Икона је ствар божанствена, но не и обожена.“
+                </p>
+                <a href="/about" class="ikonopis-link">Сазнај више о значењу иконе... &rarr;</a>
+            </div>
             <div class="ikonopis-uvod text-center m-5">
                 <a href="{{route('info')}}" class="ikonopis-link">Како поручити икону ?&rarr;</a>
             </div>

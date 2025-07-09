@@ -151,7 +151,7 @@
                 </tr>
                 <tr>
                     <td>40 x 50</td>
-                    <td>550</td>
+                    <td>500</td>
                 </tr>
                 </tbody>
             </table>
@@ -160,14 +160,16 @@
         <div class="mt-4 px-3 py-4 bg-light border-start border-4 border-brown rounded">
             <p class="mb-2"><strong>*Позлата:</strong></p>
             <ul class="mb-3">
-                <li>Цела позадина (26 x 36) — <strong>+10%</strong> на цену</li>
-                <li>Цела позадина (30 x 40) — <strong>+15%</strong> на цену</li>
+                <li>Ако се ради цела позадина, до димензије 30х40цм је <strong>+10%</strong> на цену, а 30х40цм и навише је <strong>+15%.</strong></li>
             </ul>
 
             <p class="mb-2"><strong>*Више од једне фигуре:</strong></p>
-            <p>Умањење цене од <strong>10–30%</strong> у зависности од комплексности предлошка</p>
+            <p>Увећање цене од <strong>10–30%</strong> у зависности од комплексности предлошка</p>
 
-            <p class="mb-0"><strong>*Минијатуре:</strong> од <strong>30€</strong> па навише</p>
+            <ul class="mt-3">
+                <li><strong>*Минијатуре:</strong> од <strong>30€</strong></li>
+            </ul>
+
         </div>
     </div>
 
