@@ -36,6 +36,7 @@
                  alt="Слика атељеа Иконописне радионице Анђел Шевић"
                  class="responsive-image rounded shadow-lg">
         </div>
+        {{-- test izmena za proveru --}}
 
     </div>
 @endsection
