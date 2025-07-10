@@ -159,15 +159,6 @@ h6.h1 strong {
     padding: 2rem;
 }
 
-
-.container,
-.row,
-.col {
-
-    max-width: 100%;
-}
-
-
 img {
     max-width: 100%;
     height: auto;
@@ -205,6 +196,14 @@ footer a:hover {
 
 .ikonopis-tekst strong {
     color: #6B4226;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 .ikonopis-tekst em {
