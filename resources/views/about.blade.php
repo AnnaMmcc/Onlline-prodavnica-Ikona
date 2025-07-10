@@ -31,7 +31,11 @@
                 представљајући уметнике сакралних уметности.
             </li>
         </ul>
+        <div class="text-center my-4">
+            <img src="{{ asset('storage/images/DSC09999.JPG') }}"
+                 alt="Слика атељеа Иконописне радионице Анђел Шевић"
+                 class="responsive-image rounded shadow-lg">
+        </div>
 
     </div>
-
 @endsection
