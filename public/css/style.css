@@ -211,6 +211,42 @@ footer a:hover {
     color: #a05a2c;
 }
 
+.large-card {
+    font-size: 1.4rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.large-card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.large-card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6B4226;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.large-card-text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #3a2a1a;
+    font-family: 'Playfair Display', serif;
+}
+
+.large-btn {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+
+
 
 @media (max-width: 640px) {
     .w-full.sm\:max-w-md {

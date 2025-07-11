@@ -38,5 +38,8 @@
                     <p><i class="fas fa-envelope me-2 text-primary"></i>Email: sevicandjel@gmail.com</p>
                 </div>
         </div>
+        <a href="/shop" class="btn btn-warning mt-auto text-white fw-bold">
+            Посети продавницу икона
+        </a>
     </div>
 @endsection
