@@ -1,6 +1,6 @@
 @extends("layout")
 @section("Naslov")
-    O nama|Ikonopisna radionica-Andjel Sevic
+    О нама|Иконописна радионица-Анђел Шевић
 @endsection
 @section('meta_description', 'Pogledajte našu bogatu galeriju pravoslavnih ikona i stranicu o nama, videcete na kojim je izlozbama ucestvovala Ikonopisna radionica Anđel Šević. Svaka ikona ručno rađena sa posebnom pažnjom.')
 @section("Sadrzaj")
@@ -35,8 +35,8 @@
             <img src="{{ asset('storage/images/DSC09999.JPG') }}"
                  alt="Слика атељеа Иконописне радионице Анђел Шевић"
                  class="responsive-image rounded shadow-lg">
+            <p>Наш кутак молитве, мира и стварања.</p>
         </div>
-        {{-- test izmena za proveru --}}
 
     </div>
 @endsection
