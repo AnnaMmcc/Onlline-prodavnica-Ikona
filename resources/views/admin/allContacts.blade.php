@@ -18,7 +18,6 @@
                 <th>Email</th>
                 <th>Telefon</th>
                 <th>Uloga</th>
-                <th>Akcije</th>
             </tr>
             </thead>
             <tbody>
@@ -29,10 +28,6 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->phone }}</td>
                     <td>{{ $user->role }}</td>
-                    <td>
-                        <a class="btn btn-danger btn-sm">Obriši</a>
-                        <a class="btn btn-primary btn-sm">Edituj</a>
-                    </td>
                 </tr>
             @endforeach
             </tbody>
