@@ -41,33 +41,46 @@ class IconsController extends Controller
         $query = trim(strtolower($request->input('query')));
 
         $minPrice = $request->input('min_price');
-
         $maxPrice = $request->input('max_price');
 
         $icons = IconsModel::query();
 
-        if($query)
-        {
-            $icons->where(function ($q) use ($query)
-            {
-                $q->where(DB::raw('LOWER(name)'), 'like', '%' . strtolower($query) . '%')
-                    ->orWhere(DB::raw('LOWER(description)'), 'like', '%' . strtolower($query) . '%');
+        if ($query) {
+
+            $queryCyr = strtolower($this->latinToCyrillic($query));
+
+            $icons->where(function ($q) use ($query, $queryCyr) {
+                $q->where(DB::raw('LOWER(name)'), 'like', '%' . $query . '%')
+                    ->orWhere(DB::raw('LOWER(name)'), 'like', '%' . $queryCyr . '%')
+                    ->orWhere(DB::raw('LOWER(description)'), 'like', '%' . $query . '%')
+                    ->orWhere(DB::raw('LOWER(description)'), 'like', '%' . $queryCyr . '%');
             });
         }
 
-        if($minPrice !== null)
-        {
+        if ($minPrice !== null) {
             $icons->where('price', '>=', $minPrice);
         }
-        if($maxPrice !== null)
-        {
+
+        if ($maxPrice !== null) {
             $icons->where('price', '<=', $maxPrice);
         }
-        $results = $icons->get();
 
+        $results = $icons->get();
 
         return view('icon-search', compact('results', 'query', 'minPrice', 'maxPrice'));
     }
+
+
+    private function latinToCyrillic($text)
+    {
+        $latin  = ['Dj','Lj','Nj','Dž','A','B','V','G','D','Đ','E','Ž','Z','I','J','K','L','M','N','O','P','R','S','T','Ć','U','F','H','C','Č','Š',
+            'dj','lj','nj','dž','a','b','v','g','d','đ','e','ž','z','i','j','k','l','m','n','o','p','r','s','t','ć','u','f','h','c','č','š'];
+        $cyrillic = ['Ђ','Љ','Њ','Џ','А','Б','В','Г','Д','Ђ','Е','Ж','З','И','Ј','К','Л','М','Н','О','П','Р','С','Т','Ћ','У','Ф','Х','Ц','Ч','Ш',
+            'ђ','љ','њ','џ','а','б','в','г','д','ђ','е','ж','з','и','ј','к','л','м','н','о','п','р','с','т','ћ','у','ф','х','ц','ч','ш'];
+
+        return str_replace($latin, $cyrillic, $text);
+    }
+
 
     public function allProducts()
     {
