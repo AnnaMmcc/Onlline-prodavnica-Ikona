@@ -91,7 +91,7 @@
                 <tbody>
                 <tr>
                     <td>15 x 20</td>
-                    <td>170</td>
+                    <td>180</td>
                 </tr>
                 <tr>
                     <td>20 x 26</td>
@@ -111,7 +111,7 @@
                 </tr>
                 <tr>
                     <td>40 x 50</td>
-                    <td>500</td>
+                    <td>550</td>
                 </tr>
                 </tbody>
             </table>
@@ -126,9 +126,9 @@
             <p class="mb-2"><strong>*Више од једне фигуре:</strong></p>
             <p>Увећање цене од <strong>10–30%</strong> у зависности од комплексности предлошка</p>
 
-            <ul class="mt-3">
-                <li><strong>*Минијатуре:</strong> од <strong>30€</strong></li>
-            </ul>
+            <p class="mt-3">
+                <strong>*Минијатуре:</strong> од <strong>30€</strong>
+            </p>
 
         </div>
     </div>
