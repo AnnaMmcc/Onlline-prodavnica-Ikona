@@ -14,10 +14,10 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ asset('storage/images/za sajt_8ac40d91-1255-47b2-863e-f8c32c1414b6.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('storage/images/za sajt_8ac40d91-1255-47b2-863e-f8c32c1414b6.webp') }}" class="d-block w-100" alt="Andjel Sevic slika">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('storage/images/IsusHristosPocetna.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('storage/images/САјт%202_e36a3221-3251-4db3-b2cf-c17313f765b0~2.webp') }}" class="d-block w-100" alt="Isus Hristos ikona - citat">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
