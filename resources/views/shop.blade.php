@@ -42,7 +42,7 @@
                 @foreach($availableIcons as $icon)
                     <div class="col-md-6 col-lg-4 mb-4 d-flex">
                         <div class="card w-100 h-100 hover-shadow transition">
-                            <img src="{{ url('storage/' . $icon->image) }}" class="card-img-top" alt="{{ $icon->name }}">
+                            <img src="{{ webpOrOriginal($icon->image) }}" class="card-img-top" alt="{{ $icon->name }}" loading="lazy">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">{{ $icon->name }}</h5>
                                 <p class="card-text">{{ $icon->description }}</p>
@@ -63,7 +63,7 @@
                     @foreach($unavailableIcons as $icon)
                         <div class="col-md-6 col-lg-4 mb-4 d-flex">
                             <div class="card w-100 h-100 hover-shadow transition">
-                                <img src="{{ url('storage/' . $icon->image) }}" class="card-img-top"
+                                <img src="{{ webpOrOriginal($icon->image) }}" class="card-img-top"
                                      alt="Икона {{ $icon->name }} - Иконописна радионица Анђел Шевић" loading="lazy">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">{{ $icon->name }}</h5>
