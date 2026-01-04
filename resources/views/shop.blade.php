@@ -58,7 +58,7 @@
 
 
             @if($unavailableIcons->isNotEmpty())
-                <h4 class="mt-5 mb-3 text-center ikonopis-tekst">ГАЛЕРИЈА</h4>
+                <h4 id="galerija" class="mt-5 mb-3 text-center ikonopis-tekst">ГАЛЕРИЈА</h4>
                 <div class="row justify-content-center">
                     @foreach($unavailableIcons as $icon)
                         <div class="col-md-6 col-lg-4 mb-4 d-flex">
@@ -74,7 +74,7 @@
                     @endforeach
                 </div>
                 <div class="d-flex justify-content-center mt-4 mb-5">
-                    {{ $unavailableIcons->links() }}
+                    {{ $unavailableIcons->fragment('galerija')->links() }}
                 </div>
             @endif
         @endif
