@@ -96,28 +96,7 @@ h5 {
 }
 
 
-.navbar-toggler-icon {
-    background-color: white !important;
-}
 
-.custom-toggler {
-    background-color: white;
-    border: 1px solid #5c2c2c;
-    padding: 8px 12px;
-    border-radius: 4px;
-}
-
-.custom-toggler .toggler-text {
-    color: #5c2c2c;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.custom-toggler .fa-chevron-down {
-    font-size: 0.8em;
-}
 
 
 .shadow-lg {
@@ -169,14 +148,6 @@ img {
 p, h1, h2, h3, h4, h5, h6, a, span {
     word-break: break-word;
     overflow-wrap: break-word;
-}
-
-footer a {
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #df9b11;
 }
 
 .ikonopis-tekst {
@@ -245,8 +216,162 @@ footer a:hover {
     border-radius: 0.5rem;
 }
 
+/* Stil za footer */
+.footer-modern {
+    background-color: #1a1a1a; /* Tamna, elegantna pozadina */
+    color: #f1f1f1;
+    border-top: 3px solid #d4af37; /* Zlatna linija na vrhu */
+}
+
+.footer-logo {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d4af37; /* Zlatna boja */
+    margin-bottom: 0;
+}
+
+.footer-brand-name {
+    font-family: 'Times New Roman', serif; /* Ili font koji koristiš za naslove */
+    font-weight: bold;
+}
+
+.footer-divider {
+    width: 50px;
+    height: 2px;
+    background-color: #d4af37;
+    margin-top: 10px;
+}
+
+.footer-text {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
 
 
+.footer-modern {
+    background-color: #39160b !important;
+    color: #f4e8d1;
+    border-top: 2px solid #d4af37;
+}
+
+.footer-logo {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d4af37;
+    margin-bottom: 0;
+}
+
+.footer-brand-name {
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-icon-link {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #d4af37;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.footer-icon-link:hover {
+    background-color: #d4af37;
+    color: #39160b;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-divider {
+    width: 40px;
+    height: 1px;
+    background-color: #d4af37;
+    margin-top: 8px;
+}
+
+/* Stil za novu navigaciju */
+.custom-nav {
+    background-color: #39160b !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.nav-logo-img {
+    height: 60px;
+    border-radius: 4px;
+}
+
+.brand-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.brand-subtitle {
+    font-size: 0.7rem;
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+.nav-custom-link {
+    color: white !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-custom-link:hover {
+    color: #d4af37 !important;
+}
+
+/* Zlatna dugmad za Prijavu i Registraciju */
+.btn-nav-gold {
+    background-color: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37 !important;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 6px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-nav-gold:hover {
+    background-color: #d4af37;
+    color: #39160b !important;
+}
+
+
+.custom-toggler {
+    background-color: white !important;
+    border: 1px solid #d4af37 !important;
+    padding: 5px 10px;
+}
+
+.custom-toggler .toggler-text {
+    color: #39160b;
+    font-weight: bold;
+}
 
 @media (max-width: 640px) {
     .w-full.sm\:max-w-md {
