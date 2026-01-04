@@ -10,7 +10,7 @@ class ShopController extends Controller
     public function index()
     {
         $availableIcons = IconsModel::where('is_available', 1)->get();
-        $unavailableIcons = IconsModel::where('is_available', 0)->get();
+        $unavailableIcons = IconsModel::where('is_available', 0)->paginate(12);
 
         return view("shop", compact('availableIcons', 'unavailableIcons'));
     }
