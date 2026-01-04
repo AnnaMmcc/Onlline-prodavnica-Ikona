@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::view("/", 'welcome')->name('home');
+Route::get("/", [\App\Http\Controllers\HomePageController::class, 'index'])->name('home');
 Route::get("/icons/search", [\App\Http\Controllers\IconsController::class, 'search'])->name('icon.search');
 Route::view("/about" , 'about');
 Route::view("/contact", "contact");

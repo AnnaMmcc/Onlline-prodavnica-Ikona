@@ -73,6 +73,9 @@
                         </div>
                     @endforeach
                 </div>
+                <div class="d-flex justify-content-center mt-4 mb-5">
+                    {{ $unavailableIcons->links() }}
+                </div>
             @endif
         @endif
 
