@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-md-4 mb-4 mb-md-0 text-center">
-                <p class="mb-1 footer-text">Свака икона је молитва у боји.</p>
+                <p class="mb-1 footer-text"> „Икона је ствар божанствена, но не и обожена.“</p>
                 <small class="footer-copy">&copy; 2026 Сва права задржана.</small>
             </div>
 
