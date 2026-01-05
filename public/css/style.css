@@ -1,3 +1,40 @@
+
+
+
+/* Fix za logo i pozadinu navigacije */
+.brown-bg {
+    background-color: #39160b !important;
+}
+
+.navbar-brand img {
+    max-height: 50px !important; /* Ovo drži logo pod kontrolom */
+    width: auto;
+}
+
+/* Fix za tekst koji beži */
+.navbar-nav .nav-link {
+    white-space: nowrap;
+}
+
+/* originalni toggler fix */
+.custom-toggler {
+    background-color: white !important;
+    padding: 4px 8px !important;
+    border: none !important;
+}
+
+/* Dugmići */
+.btn-warning {
+    background-color: #ffba37 !important;
+    border-color: #ffba37 !important;
+    color: #39160b !important;
+}
+
+.btn-outline-warning {
+    border-color: #ffba37 !important;
+    color: #ffba37 !important;
+}
+
 .dark-bg {
     background-color: #6B4226;
     color: white;
