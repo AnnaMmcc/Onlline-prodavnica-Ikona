@@ -30,9 +30,6 @@
             </button>
 
                 <div class="ikonopis-uvod text-center my-5 px-3 px-md-5">
-                    <p class="ikonopis-citat">
-                        „Икона је ствар божанствена, но не и обожена.“
-                    </p>
                     <div class="ikonopis-tekst">
                         <p>
                             <strong>Икона у стваралачком смислу</strong> је непресушан извор идеја и надахнућа,
