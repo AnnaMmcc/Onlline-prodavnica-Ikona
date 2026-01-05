@@ -1,434 +1,115 @@
+/* 1. OSNOVNE BOJE I GLOBALNI STIL */
+.brown-bg { background-color: #39160b !important; }
+.gold-bg { background-color: #ffba37; }
+.dark-bg { background-color: #6B4226; color: white; }
 
+body { background-color: #fff; }
+img { max-width: 100%; height: auto; display: block; }
+p, h1, h2, h3, h4, h5, h6, a, span { word-break: break-word; overflow-wrap: break-word; }
 
-
-/* Fix za logo i pozadinu navigacije */
-.brown-bg {
+/* 2. NAVIGACIJA (POVEĆANA I SREĐENA) */
+.navbar {
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
     background-color: #39160b !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .navbar-brand img {
-    max-height: 50px !important; /* Ovo drži logo pod kontrolom */
+    height: 70px !important; /* Povećan logo */
     width: auto;
+    object-fit: contain;
 }
 
-/* Fix za tekst koji beži */
-.navbar-nav .nav-link {
-    white-space: nowrap;
+.nav-link {
+    color: white !important;
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    transition: color 0.3s ease;
 }
 
-/* originalni toggler fix */
+.nav-link:hover { color: #d4af37 !important; }
+
+/* Hamburger meni popravka */
 .custom-toggler {
     background-color: white !important;
-    padding: 4px 8px !important;
     border: none !important;
+    padding: 8px 12px !important;
 }
+.custom-toggler .toggler-text { color: #39160b; font-weight: bold; }
 
-/* Dugmići */
-.btn-warning {
+/* 3. DUGMIĆI (ZLATNI) */
+.btn-warning, .btn-nav-gold {
     background-color: #ffba37 !important;
     border-color: #ffba37 !important;
     color: #39160b !important;
+    font-weight: bold;
 }
-
 .btn-outline-warning {
     border-color: #ffba37 !important;
     color: #ffba37 !important;
 }
 
-.dark-bg {
-    background-color: #6B4226;
-    color: white;
+/* 4. PAGINACIJA (FIX ZA RUŽNE STRELE) */
+.pagination { margin-top: 30px; gap: 5px; justify-content: center; }
+.page-item .page-link {
+    background-color: #f4e8d1;
+    color: #39160b;
+    border: 1px solid #d4af37;
+    padding: 8px 16px;
 }
-.gold-bg {
-    background-color: #ffba37;
+.page-item.active .page-link {
+    background-color: #d4af37 !important;
+    border-color: #d4af37 !important;
+    color: #39160b !important;
 }
-.brown-bg {
-    background-color: #39160b !important;
-}
-.black-bg {
-    background-color: #1A1A1A;
-}
-.text-brown {
-    color: #6B4226 !important;
-}
-.border-brown {
-    border: 2px solid #6B4226 !important;
-}
+/* Sakrivanje ogromnih SVG strelica koje Laravel nekad ubaci */
+.pagination svg { width: 20px; height: 20px; }
 
-.hover-shadow:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transform: translateY(-4px);
-    transition: all 0.2s ease-in-out;
-}
-.transition {
-    transition: all 0.2s ease-in-out;
-}
-.brand-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.0rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-}
-
-.brand-logo:hover {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-    transform: scale(1.03);
-}
-
-h3 {
-    font-size: 1.5rem !important;
-    font-weight: bold !important;
-    font-family: 'Playfair Display', serif;
-    color: #6B4226;
-    margin-bottom: 1rem;
-}
-
-h5 {
-    font-size: 1.3rem !important;
-    font-weight: bold !important;
-    font-family: 'Playfair Display', serif;
-    color: #6B4226;
-    margin-bottom: 1rem;
-}
-
-.ikonopis-uvod {
-    background-color: #F5F0E6;
-    border-left: 4px solid #6B4226;
-    padding: 1.5rem 2rem;
-    border-radius: 0.5rem;
-    font-family: 'Playfair Display', serif;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.ikonopis-citat {
-    font-size: 1.4rem;
-    font-style: italic;
-    color: #6B4226;
-    margin-bottom: 0.5rem;
-    text-shadow: 1px 1px 1px rgba(107, 66, 38, 0.1);
-}
-
-.ikonopis-link {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #6B4226;
-    text-decoration: none;
-    border-bottom: 1px dashed #6B4226;
-    transition: all 0.2s ease-in-out;
-}
-
-.ikonopis-link:hover {
-    color: #3d2a1a;
-    border-bottom: 1px solid transparent;
-}
-
-
-.navbar .nav-link,
-.navbar .navbar-brand {
-    color: white !important;
-}
-
-
-
-
-
-.shadow-lg {
-    box-shadow: 0 8px 20px rgba(92, 58, 33, 0.25);
-}
-
-.rounded-3 {
-    border-radius: 15px;
-}
-
-h6.h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Arial', sans-serif;
-}
-
-h6.h1 strong {
-    display: block;
-}
-
-.w-full.sm\:max-w-md {
-    max-width: 400px;
-}
-
-.login-container {
-    max-width: 400px;
-    width: 100%;
-    padding: 2.5rem 2rem;
-    margin-top: 1.5rem;
-    background: white;
-}
-
-
-.content-wrapper {
-    max-width: 960px;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-p, h1, h2, h3, h4, h5, h6, a, span {
-    word-break: break-word;
-    overflow-wrap: break-word;
-}
-
-.ikonopis-tekst {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    font-family: 'Playfair Display', serif;
-    color: #3a2a1a;
-    text-align: justify;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1.5rem 1rem;
-}
-
-.ikonopis-tekst p {
-    margin-bottom: 1.5rem;
-}
-
-.ikonopis-tekst strong {
-    color: #6B4226;
-}
-
-.responsive-image {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
-
-.ikonopis-tekst em {
-    font-style: italic;
-    color: #a05a2c;
-}
-
-.large-card {
-    font-size: 1.4rem;
-    padding: 2rem;
-    border-radius: 1rem;
-}
-
-.large-card-img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.large-card-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #6B4226;
-    margin-bottom: 1rem;
-    font-family: 'Playfair Display', serif;
-}
-
-.large-card-text {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    color: #3a2a1a;
-    font-family: 'Playfair Display', serif;
-}
-
-.large-btn {
-    font-size: 1.2rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-}
-
-/* Stil za footer */
-.footer-modern {
-    background-color: #1a1a1a; /* Tamna, elegantna pozadina */
-    color: #f1f1f1;
-    border-top: 3px solid #d4af37; /* Zlatna linija na vrhu */
-}
-
-.footer-logo {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #d4af37; /* Zlatna boja */
-    margin-bottom: 0;
-}
-
-.footer-brand-name {
-    font-family: 'Times New Roman', serif; /* Ili font koji koristiš za naslove */
-    font-weight: bold;
-}
-
-.footer-divider {
-    width: 50px;
-    height: 2px;
-    background-color: #d4af37;
-    margin-top: 10px;
-}
-
-.footer-text {
-    font-style: italic;
-    opacity: 0.8;
-}
-
-.footer-copy {
-    font-size: 0.8rem;
-    opacity: 0.5;
-}
-
-
+/* 5. FOOTER (POPRAVKA PLAVIH IKONICA) */
 .footer-modern {
     background-color: #39160b !important;
     color: #f4e8d1;
     border-top: 2px solid #d4af37;
-}
-
-.footer-logo {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #d4af37;
-    margin-bottom: 0;
-}
-
-.footer-brand-name {
-    font-family: 'Times New Roman', serif;
-    font-weight: bold;
-    color: #ffffff;
+    padding: 3rem 0;
 }
 
 .footer-icon-link {
-    width: 45px;
-    height: 45px;
+    width: 45px; height: 45px;
     background-color: rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     border-radius: 50%;
-    color: #d4af37;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    color: #d4af37 !important; /* Forsirano zlatna */
     border: 1px solid rgba(212, 175, 55, 0.3);
+    text-decoration: none !important;
 }
+
+.footer-icon-link i { color: #d4af37 !important; } /* Fix za ikonice */
 
 .footer-icon-link:hover {
-    background-color: #d4af37;
-    color: #39160b;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.footer-divider {
-    width: 40px;
-    height: 1px;
-    background-color: #d4af37;
-    margin-top: 8px;
-}
-
-/* Stil za novu navigaciju */
-.custom-nav {
-    background-color: #39160b !important;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-.nav-logo-img {
-    height: 60px;
-    border-radius: 4px;
-}
-
-.brand-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
-
-.brand-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #ffffff;
-}
-
-.brand-subtitle {
-    font-size: 0.7rem;
-    color: #d4af37;
-    letter-spacing: 1px;
-}
-
-.nav-custom-link {
-    color: white !important;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.nav-custom-link:hover {
-    color: #d4af37 !important;
-}
-
-/* Zlatna dugmad za Prijavu i Registraciju */
-.btn-nav-gold {
-    background-color: transparent;
-    border: 1px solid #d4af37;
-    color: #d4af37 !important;
-    font-weight: bold;
-    font-size: 0.85rem;
-    padding: 6px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-nav-gold:hover {
-    background-color: #d4af37;
+    background-color: #d4af37 !important;
     color: #39160b !important;
 }
+.footer-icon-link:hover i { color: #39160b !important; }
 
-
-.custom-toggler {
-    background-color: white !important;
-    border: 1px solid #d4af37 !important;
-    padding: 5px 10px;
+/* 6. TEKST I UVOD (PLAYFAIR FONT) */
+.ikonopis-tekst {
+    font-size: 1.15rem; line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    color: #3a2a1a; text-align: justify;
+    max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem;
+}
+.ikonopis-uvod {
+    background-color: #F5F0E6;
+    border-left: 4px solid #6B4226;
+    padding: 1.5rem 2rem; margin: 2rem auto;
 }
 
-.custom-toggler .toggler-text {
-    color: #39160b;
-    font-weight: bold;
+/* 7. KARTICE */
+.hover-shadow:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    transition: all 0.2s ease;
 }
-
-@media (max-width: 640px) {
-    .w-full.sm\:max-w-md {
-        max-width: 100%;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .content-wrapper {
-        max-width: 100%;
-        border-radius: 0;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-        margin: 0;
-        box-shadow: none;
-        color: #000;
-        background-color: #fff !important;
-    }
-}
-
-
