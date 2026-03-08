@@ -21,6 +21,39 @@
                 <li class="nav-item"><a class="nav-link text-white px-3" href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
 
+            @if(Auth::check() && Auth::user()->role === 'admin')
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown">
+                        ДЕТАЉИ
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{ route('product.new') }}">
+                                Додај производ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="{{ route('products.all') }}">
+                                Сви производи
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="{{ route('all.contacts') }}">
+                                Контакти
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="{{ route('all.orders') }}">
+                                Поруџбине
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+
             <div class="d-flex gap-2 align-items-center">
                 @if(\Illuminate\Support\Facades\Auth::check())
                     <a class="nav-link text-white small me-2" href="{{ route('profile.edit') }}">{{ Auth::user()->name }}</a>
