@@ -5,8 +5,18 @@
 .gold-bg { background-color: #ffba37; }
 .dark-bg { background-color: #6B4226; color: white; }
 
-body {
-    background-color: #fff;
+html, body {
+    min-height: 100%;
+    background-color: #f9f8f5 !important;
+    background-image:
+        radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom,
+            rgba(0,0,0,0.04),
+            transparent 25%,
+            transparent 75%,
+            rgba(0,0,0,0.04)
+        );
+    background-size: 18px 18px, 100% 100%;
 }
 
 img {
@@ -247,4 +257,8 @@ p, h1, h2, h3, h4, h5, h6, a, span {
     background: #F5F0E6;
     border-left: 4px solid #6B4226;
     border-radius: 14px;
+}
+
+.content-wrapper {
+    background: transparent;
 }

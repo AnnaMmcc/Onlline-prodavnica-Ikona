@@ -24,13 +24,13 @@
     <title>@yield('Naslov', 'Ikonopisna radionica Anđel Sević')</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100 brown-bg text-white">
+<body class="d-flex flex-column min-vh-100 text-white">
 
 @include('navigation')
 
 <main class="flex-grow-1">
     <div class="container-fluid px-0">
-        <div class="content-wrapper bg-light text-dark py-5 px-3 px-md-5 rounded mx-auto">
+        <div class="content-wrapper text-dark py-5 px-3 px-md-5 rounded mx-auto">
             @yield('Sadrzaj')
         </div>
     </div>
