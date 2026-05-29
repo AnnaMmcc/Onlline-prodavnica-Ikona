@@ -1,13 +1,29 @@
-/* 1. OSNOVNE BOJE I GLOBALNI STIL */
+/* =========================
+   1. OSNOVNE BOJE I GLOBAL
+========================= */
 .brown-bg { background-color: #39160b !important; }
 .gold-bg { background-color: #ffba37; }
 .dark-bg { background-color: #6B4226; color: white; }
 
-body { background-color: #fff; }
-img { max-width: 100%; height: auto; display: block; }
-p, h1, h2, h3, h4, h5, h6, a, span { word-break: break-word; overflow-wrap: break-word; }
+body {
+    background-color: #fff;
+}
 
-/* 2. NAVIGACIJA (POVEĆANA I SREĐENA) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, span {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================
+   2. NAVIGACIJA
+========================= */
 .navbar {
     padding-top: 1.2rem !important;
     padding-bottom: 1.2rem !important;
@@ -16,7 +32,7 @@ p, h1, h2, h3, h4, h5, h6, a, span { word-break: break-word; overflow-wrap: brea
 }
 
 .navbar-brand img {
-    height: 70px !important; /* Povećan logo */
+    height: 70px !important;
     width: auto;
     object-fit: contain;
 }
@@ -30,45 +46,69 @@ p, h1, h2, h3, h4, h5, h6, a, span { word-break: break-word; overflow-wrap: brea
     transition: color 0.3s ease;
 }
 
-.nav-link:hover { color: #d4af37 !important; }
+.nav-link:hover {
+    color: #d4af37 !important;
+}
 
-/* Hamburger meni popravka */
 .custom-toggler {
     background-color: white !important;
     border: none !important;
     padding: 8px 12px !important;
 }
-.custom-toggler .toggler-text { color: #39160b; font-weight: bold; }
 
-/* 3. DUGMIĆI (ZLATNI) */
+.custom-toggler .toggler-text {
+    color: #39160b;
+    font-weight: bold;
+}
+
+
+/* =========================
+   3. DUGMIĆI
+========================= */
 .btn-warning, .btn-nav-gold {
     background-color: #ffba37 !important;
     border-color: #ffba37 !important;
     color: #39160b !important;
     font-weight: bold;
 }
+
 .btn-outline-warning {
     border-color: #ffba37 !important;
     color: #ffba37 !important;
 }
 
-/* 4. PAGINACIJA (FIX ZA RUŽNE STRELE) */
-.pagination { margin-top: 30px; gap: 5px; justify-content: center; }
+
+/* =========================
+   4. PAGINACIJA
+========================= */
+.pagination {
+    margin-top: 30px;
+    gap: 5px;
+    justify-content: center;
+}
+
 .page-item .page-link {
     background-color: #f4e8d1;
     color: #39160b;
     border: 1px solid #d4af37;
     padding: 8px 16px;
 }
+
 .page-item.active .page-link {
     background-color: #d4af37 !important;
     border-color: #d4af37 !important;
     color: #39160b !important;
 }
-/* Sakrivanje ogromnih SVG strelica koje Laravel nekad ubaci */
-.pagination svg { width: 20px; height: 20px; }
 
-/* 5. FOOTER (POPRAVKA PLAVIH IKONICA) */
+.pagination svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =========================
+   5. FOOTER
+========================= */
 .footer-modern {
     background-color: #39160b !important;
     color: #f4e8d1;
@@ -77,39 +117,134 @@ p, h1, h2, h3, h4, h5, h6, a, span { word-break: break-word; overflow-wrap: brea
 }
 
 .footer-icon-link {
-    width: 45px; height: 45px;
+    width: 45px;
+    height: 45px;
     background-color: rgba(255, 255, 255, 0.05);
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    color: #d4af37 !important; /* Forsirano zlatna */
+    color: #d4af37 !important;
     border: 1px solid rgba(212, 175, 55, 0.3);
     text-decoration: none !important;
 }
 
-.footer-icon-link i { color: #d4af37 !important; } /* Fix za ikonice */
+.footer-icon-link i {
+    color: #d4af37 !important;
+}
 
 .footer-icon-link:hover {
     background-color: #d4af37 !important;
     color: #39160b !important;
 }
-.footer-icon-link:hover i { color: #39160b !important; }
 
-/* 6. TEKST I UVOD (PLAYFAIR FONT) */
-.ikonopis-tekst {
-    font-size: 1.15rem; line-height: 1.8;
-    font-family: 'Playfair Display', serif;
-    color: #3a2a1a; text-align: justify;
-    max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem;
+.footer-icon-link:hover i {
+    color: #39160b !important;
 }
+
+
+/* =========================
+   6. TEKST (IKONOPIS)
+========================= */
+.ikonopis-tekst {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    font-family: 'Playfair Display', serif;
+    color: #3a2a1a;
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
 .ikonopis-uvod {
     background-color: #F5F0E6;
     border-left: 4px solid #6B4226;
-    padding: 1.5rem 2rem; margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
 }
 
-/* 7. KARTICE */
+
+/* =========================
+   7. KARTICE (HOVER GLOBAL)
+========================= */
 .hover-shadow:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-4px);
     transition: all 0.2s ease;
+}
+
+
+/* =========================
+   8. OWNER TEKST BLOK
+========================= */
+.text-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.owner-box {
+    background: #F5F0E6;
+    border-left: 5px solid #6B4226;
+    color: #3a2a1a;
+}
+
+
+/* =========================
+   9. CITATI - SVETLI (SREDINA)
+========================= */
+.quote-card.light {
+    background: #ffffff;
+    border-left: 4px solid #d4af37;
+    border: 1px solid rgba(212,175,55,0.25);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-family: 'Playfair Display', serif;
+    transition: all 0.25s ease;
+    height: 100%;
+}
+
+.quote-card.light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+}
+
+.quote-card.light p {
+    color: #3a2a1a;
+    line-height: 1.7;
+}
+
+.quote-card.light span {
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+    color: #6B4226;
+}
+.ikonopis-video {
+    width: 100%;
+    max-width: 500px;   /* ključ: sužava ga */
+    max-height: 650px;  /* da ne ode u beskonačno */
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 12px;
+    border: 1px solid rgba(212,175,55,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    object-fit: cover;
+}
+.video-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 12px;
+    background: #F5F0E6;
+    border-left: 4px solid #6B4226;
+    border-radius: 14px;
 }
