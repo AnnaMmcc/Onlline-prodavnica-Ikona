@@ -110,7 +110,7 @@
             {{-- VIDEO 2 --}}
             <div class="media-card">
 
-                <video controls playsinline class="atelier-video">
+                <video controls muted playsinline class="atelier-video">
                     <source src="{{ asset('videos/pripremazapozlatu.mp4') }}" type="video/mp4">
                 </video>
 
