@@ -37,7 +37,7 @@
         @if($availableIcons->isEmpty() && $unavailableIcons->isEmpty())
             <p class="text-center">Тренутно нема икона које одговарају претрази.</p>
         @else
-            <h4 class="mt-5 mb-3 text-center ikonopis-tekst">ИКОНЕ - ОДМАХ ДОСТУПНЕ ЗА ПРЕУЗИМАЊЕ</h4>
+            <h4 class="mt-5 mb-3 text-center ikonopis-tekst">ДОСТУПНЕ ИКОНЕ</h4>
             <div class="row justify-content-center">
                 @foreach($availableIcons as $icon)
                     <div class="col-md-6 col-lg-4 mb-4 d-flex">
