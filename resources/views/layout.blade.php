@@ -17,8 +17,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ time() }}">
     <link rel="icon" href="{{ asset('storage/images/1000000645.jpg') }}" type="image/jpeg">
 
     <title>@yield('Naslov', 'Ikonopisna radionica Anđel Sević')</title>
