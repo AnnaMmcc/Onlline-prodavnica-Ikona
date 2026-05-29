@@ -93,7 +93,7 @@
             {{-- VIDEO 1 --}}
             <div class="media-card">
 
-                <video controls playsinline class="atelier-video">
+                <video controls muted playsinline class="atelier-video">
                     <source src="{{ asset('videos/detalj.mp4') }}" type="video/mp4">
                 </video>
 
@@ -127,7 +127,7 @@
             {{-- VIDEO 3 --}}
             <div class="media-card">
 
-                <video controls playsinline class="atelier-video">
+                <video controls muted playsinline class="atelier-video">
                     <source src="{{ asset('videos/lakiranje.mp4') }}" type="video/mp4">
                 </video>
 
@@ -233,7 +233,7 @@
             {{-- VIDEO 4 --}}
             <div class="media-card">
 
-                <video controls playsinline class="atelier-video">
+                <video controls muted playsinline class="atelier-video">
                     <source src="{{ asset('videos/detalj2.mp4') }}" type="video/mp4">
                 </video>
 
@@ -249,7 +249,7 @@
             {{-- VIDEO 5 --}}
             <div class="media-card">
 
-                <video controls playsinline class="atelier-video">
+                <video controls muted playsinline class="atelier-video">
                     <source src="{{ asset('videos/perlica.mp4') }}" type="video/mp4">
                 </video>
 
@@ -278,7 +278,7 @@
             {{-- VIDEO 6 --}}
             <div class="media-card">
 
-                <video controls playsinline class="atelier-video">
+                <video controls muted playsinline class="atelier-video">
                     <source src="{{ asset('videos/arhangeli.mp4') }}" type="video/mp4">
                 </video>
 
@@ -296,7 +296,7 @@
             {{-- VIDEO 7 --}}
             <div class="media-card">
 
-                <video controls playsinline class="atelier-video">
+                <video controls muted playsinline class="atelier-video">
                     <source src="{{ asset('videos/pakovanje.mp4') }}" type="video/mp4">
                 </video>
 
