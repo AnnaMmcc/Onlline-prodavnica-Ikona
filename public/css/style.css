@@ -262,3 +262,27 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 .content-wrapper {
     background: transparent;
 }
+
+.shop-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem 1rem;
+}
+
+.shop-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.7rem;
+    color: #5a3921;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.shop-subtitle {
+    font-size: 1.1rem;
+    color: #6c5847;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+    font-style: italic;
+}

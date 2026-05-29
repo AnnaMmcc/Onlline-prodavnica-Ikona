@@ -7,6 +7,18 @@
 
 @section("Sadrzaj")
     <div class="container mt-4">
+        <div class="shop-hero text-center mb-5">
+
+    <h1 class="shop-title">
+        Доступне иконе и наша галерија икона
+    </h1>
+
+    <p class="shop-subtitle">
+        Ручно рађене православне иконе, писане у духу
+        традиције и канона православне Цркве.
+    </p>
+
+</div>
         <div class="d-flex justify-content-center mt-3">
             <form action="{{ route('icon.search') }}" method="GET"
                   class="w-100 mb-4 p-4 border rounded shadow bg-white" style="max-width: 900px;">
