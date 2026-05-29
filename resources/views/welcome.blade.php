@@ -97,7 +97,7 @@
                 <div class="ikonopis-uvod text-center my-5 px-3 px-md-5">
                     <a href="{{route('info')}}" class="ikonopis-link">Како поручити икону ? &rarr;</a>
                 </div>
-            <h4 class="mt-5 mb-3 text-center ikonopis-tekst">ИКОНЕ - ОДМАХ ДОСТУПНЕ ЗА ПРЕУЗИМАЊЕ</h4>
+            <h4 class="mt-5 mb-3 text-center ikonopis-tekst">ДОСУПНЕ ИКОНЕ</h4>
             <div class="row justify-content-center">
                 @foreach($availableIcons as $icon)
                     <div class="col-md-6 col-lg-4 mb-4 d-flex">
