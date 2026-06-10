@@ -16,7 +16,7 @@
             <ul class="navbar-nav mx-auto text-uppercase" style="font-size: 0.85rem;">
                 <li class="nav-item"><a class="nav-link text-white px-3" href="/">Почетна</a></li>
                 <li class="nav-item"><a class="nav-link text-white px-3" href="/about">О нама</a></li>
-                <li class="nav-item"><a class="nav-link text-white px-3" href="/shop">Продавница</a></li>
+                <li class="nav-item"><a class="nav-link text-white px-3" href="/shop">Галерија</a></li>
                 <li class="nav-item"><a class="nav-link text-white px-3" href="/contact">Контакт</a></li>
                 <li class="nav-item"><a class="nav-link text-white px-3" href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
